@@ -13,7 +13,7 @@
 	alert("Value: " + stepVal);
     }
     </script>
-    <link rel="stylesheet" type="text/css" href="../css/AdminCreateNew.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/standard.css"/>
   </head>
   <body>
     <div id="login">

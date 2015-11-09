@@ -13,7 +13,7 @@ session_start();
 	alert("Value: " + stepVal);
     }
     </script>
-    <link rel="stylesheet" type="text/css" href="../css/AdminPrintSchedule.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/standard.css"/>
   </head>
   <body>
     <div id="login">

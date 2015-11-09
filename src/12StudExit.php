@@ -6,7 +6,7 @@ session_start();
   <head>
     <meta charset="UTF-8" />
     <title>Exit Message</title>
-    <link rel='stylesheet' type='text/css' href='../css/StudExit.css'/>
+    <link rel='stylesheet' type='text/css' href='../css/standard.css'/>
   </head>
   <body>
     <div id="login">

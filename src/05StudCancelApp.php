@@ -9,7 +9,7 @@ $COMMON = new Common($debug);
   <head>
     <meta charset="UTF-8" />
     <title>Cancel Appointment</title>
-    <link rel='stylesheet' type='text/css' href='../css/StudCancelApp.css'/>
+    <link rel='stylesheet' type='text/css' href='../css/standard.css'/>
   </head>
   <body>
     <div id="login">

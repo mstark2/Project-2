@@ -7,7 +7,7 @@ session_start();
   <head>
     <meta charset="UTF-8" />
     <title>Edit Appointment</title>
-    <link rel="stylesheet" type="text/css" href="AdminEditApp.css"
+    <link rel="stylesheet" type="text/css" href="standard.css"
   </head>
   <body>
     <div id="login">
