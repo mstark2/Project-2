@@ -1,82 +1,80 @@
 html{ 
-    
-      background-color: 
-      #99CCFF; 
-      font-family: Arial; 
-      font-size: 13px; 
-      position: relative; 
+      background-color:#99CCFF; 
+      font-family:Arial; 
+      font-size:13px; 
+      position:relative; 
       }
 
       body{ 
-      margin: 0; 
-      padding: 0; 
+      margin:0; 
+      padding:0; 
       }
 
       a{ 
-      color: #07f; 
-      text-decoration: none; 
+      color:#07f; 
+      text-decoration:none; 
       }
 
       a:hover{ 
-      text-decoration: underline; 
+      text-decoration:underline; 
       }
 
       #login{ 
-      color: #000; 
-      background-color: #fff; 
-      margin: 100px auto 0; 
-      padding: 20px 20px 20px; 
-      position: relative; 
-      width: 600px; 
-      -webkit-border-radius: 8px; 
-      -moz-border-radius: 8px; 
-      border-radius: 8px; 
+      color:#000; 
+      background-color:#fff; 
+      margin:100px auto 0; 
+      padding:20px 20px 20px; 
+      position:relative; 
+      width:550px; 
+      -webkit-border-radius:8px; 
+      -moz-border-radius:8px; 
+      border-radius:8px; 
       }
 
-	h1{ 
-      font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; 
-      font-size: 36px; 
-	  text-align: center;
-      line-height: 50px; 
-      margin: 0; 
-      padding: 0; 
+	  h1{ 
+      font-family:"Helvetica Neue", Arial, Helvetica, sans-serif; 
+      font-size:36px; 
+	  text-align:center;
+      line-height:50px; 
+      margin:0; 
+      padding:0; 
       }
 	  
       h2{ 
-      font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; 
-      font-size: 24px; 
-	  text-align: center;
-      line-height: 30px; 
-      margin: 0; 
-      padding: 0; 
+      font-family:"Helvetica Neue", Arial, Helvetica, sans-serif; 
+      font-size:24px; 
+	  text-align:center;
+      line-height:30px; 
+      margin:0; 
+      padding:0; 
       }
 
       ul{ 
-      margin: 8px 20px; 
-      padding: 0; 
+      margin:8px 20px; 
+      padding:0; 
       }
 
       li{ 
-      margin-top: 8px; 
+      margin-top:8px; 
       }
       
       input[type="text"],input[type="email"], textarea {
-        background-color: #F6F6F6;
-        border: 1px solid #999;
-        color: #444;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        line-height: 16px;
-        padding: 4px;
-        -moz-border-radius: 4px;
-        -webkit-border-radius: 4px;
-        width: 262px;
+        background-color:#F6F6F6;
+        border:1px solid #999;
+        color:#444;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size:20px;
+        line-height:16px;
+        padding:4px;
+        -moz-border-radius:4px;
+        -webkit-border-radius:4px;
+        width:262px;
       }
 	  
 	  select{
-	  font-size: 18px;
-	  font-family: Arial, Helvetica, sans-serif;
-	  color: #444;
+	  font-size:18px;
+	  font-family:Arial, Helvetica, sans-serif;
+	  color:#444;
 	  position: relative;
 	  }
       
@@ -114,10 +112,11 @@ html{
       }
       
       .button.large {
-        font-size: 16px;
-        height: 32px;
+        font-size: 32px;
+        height: 64px;
         padding: 0 16px;
 		position: center;
+		margin-left: 105px;
       }
       
       .button.go {
