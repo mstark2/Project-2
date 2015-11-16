@@ -109,6 +109,9 @@ while($row = mysql_fetch_row($rs)){
 			</div>
 			</div>
 		</form>
+	<?php
+		include ('footer.html');
+	?>
   </body>
   
 </html>
