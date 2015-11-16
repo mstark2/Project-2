@@ -73,7 +73,7 @@ error_reporting (E_ALL);
 		</div>
 		</form>
 	<?php
-		include 'footer.php';
+		include ('footer.html');
 	?>
   </body>
 </html>
