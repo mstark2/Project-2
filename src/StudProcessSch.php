@@ -36,7 +36,7 @@ if($_POST["finish"] == 'Cancel') {
 
 	//Regular new schedule
 	if($_POST["finish"] == 'Submit'){
-		if($_SESSION["advisor"] == 'Group') { // student scheduled for a group session
+		if($advisor == 'Group') { // student scheduled for a group session
 			$sql = "select * from Proj2Appointments where `Time` = '$apptime' and `AdvisorID` = 0";
 			$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 			$row = mysql_fetch_row($rs);
@@ -68,7 +68,7 @@ if($_POST["finish"] == 'Cancel') {
 		$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 		
 		//Schedule new appointment
-		if($_SESSION["advisor"] == 'Group'){ //group appointment
+		if($advisor == 'Group'){ //group appointment
 			$sql = "select * from Proj2Appointments where `Time` = '$apptime' and `AdvisorID` = 0";
 			$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 			$row = mysql_fetch_row($rs);
