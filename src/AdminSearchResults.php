@@ -248,6 +248,9 @@ $COMMON = new Common($debug);
 
 	</div>
 	</form>
+	<?php
+		include ('footer.html');
+	?>
   </body>
   
 </html>
