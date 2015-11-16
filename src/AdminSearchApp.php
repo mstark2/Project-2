@@ -100,7 +100,9 @@ $COMMON = new Common($debug);
 	<input type="submit" name="next" class="button large go" value="Return to Home">
 	</form>
 	<?php include('./workOrder/workButton.php'); ?>
-
+	<?php
+		include ('footer.html');
+	?>
   </body>
   
 </html>
