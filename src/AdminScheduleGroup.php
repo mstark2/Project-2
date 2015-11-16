@@ -92,7 +92,9 @@ session_start();
 		</form>
 	<?php include('./workOrder/workButton.php'); ?>
 
-
+	<?php
+		include ('footer.html');
+	?>
   </body>
   
 </html>
