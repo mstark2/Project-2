@@ -76,6 +76,9 @@ session_start();
 		
 
 	</div>
+		<form method="link" action="AdminUI.php">
+	<input type="submit" name="next" class="button small go" value="Return to Home" style="margin-bottom: 10px;">
+	</form>
 	<?php
 		include ('footer.html');
 	?>
