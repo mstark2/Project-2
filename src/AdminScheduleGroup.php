@@ -50,6 +50,11 @@ session_start();
         <input type="checkbox" name="time[]" value="15:30:00"> 3:30PM - 4:00PM <br>
        
       </div>
+      
+      <div class="field">
+      	<label for="Meeting Room">Meeting Room</label>
+      	  <input type="text" name="meeting room" value="">
+      </div>
 
         <!-- Possible majors to choose from -->
       <div class="field">
