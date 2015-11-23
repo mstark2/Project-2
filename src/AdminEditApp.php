@@ -7,7 +7,7 @@ session_start();
   <head>
     <meta charset="UTF-8" />
     <title>Edit Appointment</title>
-    <link rel="stylesheet" type="text/css" href="standard.css"
+    <link rel='stylesheet' type='text/css' href='../css/standard.css'/>
   </head>
   <body>
     <div id="login">
@@ -19,8 +19,8 @@ session_start();
 	<form method="post" action="AdminProcessEdit.php">
 	<div class="nextButton">
         <!-- Select individual or group -->
-		<input type="submit" name="next" class="button large go" value="Individual">
-		<input type="submit" name="next" class="button large go" value="Group">
+		<input type="submit" name="next" class="button medium go" value="Individual">
+		<input type="submit" name="next" class="button medium go" value="Group" style="float: right;">
 	</div>
 	</form>
         </div>
@@ -28,7 +28,7 @@ session_start();
 	<br>
 	<br>
 	<form method="link" action="AdminUI.php">
-	<input type="submit" name="next" class="button large go" value="Return to Home">
+	<input type="submit" name="next" class="button small go" value="Return to Home">
 	</form>
          
         </div>

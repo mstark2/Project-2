@@ -57,13 +57,13 @@ $COMMON = new Common($debug);
 			</select>
         </div>
 	    <div class="nextButton">
-			<input type="submit" name="go" class="button large go" value="Go">
+			<input type="submit" name="go" class="button medium go" value="Go">
 	    </div>
 		</div>
 		</form>
 		<form action="02StudHome.php" method="post" name="complete">
 	    <div class="returnButton">
-			<input type="submit" name="return" class="button large go" value="Return to Home">
+			<input type="submit" name="return" class="button small go" value="Return to Home">
 	    </div>
 		</div>
 		</form>

@@ -19,22 +19,22 @@ session_start();
 	<form method="post" action="AdminProcessSchedule.php">
 	<div class="nextButton">
         <!-- Choose individual or group -->
-		<input type="submit" name="next" class="button large go" value="Individual">
-		<input type="submit" name="next" class="button large go" value="Group" style="float: right;">
+		<input type="submit" name="next" class="button medium go" value="Individual">
+		<input type="submit" name="next" class="button medium go" value="Group" style="float: right;">
 	</div>
 	</form>
         </div>
 	</div>
 		</form>
 		<form method="link" action="AdminUI.php">
-		<input type="submit" name="home" class="button large" value="Cancel">
+		<input type="submit" name="home" class="button small" style="margin-bottom: 10px" value="Cancel">
 		</form>
-   	</div>
-	</div>
-
 	<?php
 		include ('footer.html');
 	?>	
+   	</div>
+
+	</div>
   </body>
   
 </html>

@@ -53,22 +53,22 @@ error_reporting (E_ALL);
 				if($adminCancel == true){
 					echo "<p style='color:red'>The advisor has cancelled your appointment! Please schedule a new appointment.</p>";
 				}
-				echo "<button type='submit' name='selection' class='button large selection' value='Signup'>Signup for an appointment</button><br>";
-                echo "<button type='submit' name = 'selection' class='button large selection' value='Find'>Find next available appointment</button><br>";
+				echo "<button type='submit' name='selection' class='button medium selection' value='Signup'>Signup for an appointment</button><br>";
+                echo "<button type='submit' name = 'selection' class='button medium selection' value='Find'>Find next available appointment</button><br>";
 			}
 			else{ //Student already has an appointment, show extra options
-				echo "<button type='submit' name='selection' class='button large selection' value='View'>View my appointment</button><br>";
-				echo "<button type='submit' name='selection' class='button large selection' value='Reschedule'>Reschedule my appointment</button><br>";
-				echo "<button type='submit' name='selection' class='button large selection' value='Cancel'>Cancel my appointment</button><br>";
+				echo "<button type='submit' name='selection' class='button medium selection' value='View'>View my appointment</button><br>";
+				echo "<button type='submit' name='selection' class='button medium selection' value='Reschedule'>Reschedule my appointment</button><br>";
+				echo "<button type='submit' name='selection' class='button medium selection' value='Cancel'>Cancel my appointment</button><br>";
 			}
-			echo "<button type='submit' name='selection' class='button large selection' value='Search'>Search for appointment</button><br>";
-			echo "<button type='submit' name='selection' class='button large selection' value='Edit'>Edit student information</button><br>";
+			echo "<button type='submit' name='selection' class='button medium selection' value='Search'>Search for appointment</button><br>";
+			echo "<button type='submit' name='selection' class='button medium selection' value='Edit'>Edit student information</button><br>";
 		?>
 		</form>
         </div>
 		<form action="Logout.php" method="post" name="Logout">
 	    <div class="logoutButton">
-			<input type="submit" name="logout" class="button large go" value="Logout">
+			<input type="submit" name="logout" class="button small go" value="Logout">
 	    </div>
 		</div>
 		</form>

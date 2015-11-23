@@ -105,7 +105,7 @@ while($row = mysql_fetch_row($rs)){
 					</select>
 			</div>
 			<div class="nextButton">
-				<input type="submit" name="save" class="button large go" value="Save">
+				<input type="submit" name="save" class="button medium go" value="Save">
 			</div>
 			</div>
 		</form>

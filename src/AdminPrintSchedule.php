@@ -24,12 +24,12 @@ session_start();
 	         <div class="field">
 	     	     <label for="date">Date</label>
                  <!-- Input date of appointments to print -->
-             <input id="date" type="date" name="date" placeholder="mm/dd/yyyy" required autofocus> (mm/dd/yyyy)
+             <input id="date" type="date" name="date" placeholder="mm/dd/yyyy" style="height:25px" required autofocus> 
 	         </div>
 
 	         <div class="field">
         		<label for="Type">Type of Appointment</label>
-            <select id="type" name = "type">
+            <select id="type" name = "type" style="height:25px">
                 <!-- Choose type of appointments to print -->
 					<option>Both</option>
         			<option>Individual</option>
@@ -40,10 +40,14 @@ session_start();
 	         <br>
 
     	    <div class="nextButton">
-    			<input type="submit" name="next" class="button large go" value="Next">
+    			<input type="submit" name="next" class="button medium go" value="Next">
         </form>
+		
 	</div>
 	</div>
+		<form method="link" action="AdminUI.php">
+		<input type="submit" name="home" class="button small" style="margin-bottom: 10px" value="Cancel">
+		</form>
 	<?php include('./workOrder/workButton.php'); ?>
 	<?php
 		include ('footer.html');

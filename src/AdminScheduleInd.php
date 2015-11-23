@@ -81,12 +81,12 @@ session_start();
 		      more week(s)</h3>
         </div>
 	    <div class="nextButton">
-			<input type="submit" name="next" class="button large go" value="Create">
+			<input type="submit" name="next" class="button medium go" value="Create">
 	</div>
 	</div>
 	</form>
 	<form method="link" action="AdminUI.php" name="home">
-		<input type="submit" name="next" class="button large go" value="Return to Home">
+		<input type="submit" name="next" class="button small go" value="Return to Home">
 	</form>
 	<?php include('./workOrder/workButton.php'); ?>
 	<?php

@@ -90,14 +90,14 @@ $COMMON = new Common($debug);
 	    </div>
 
 	<div class="nextButton">
-			<input type="submit" name="go" class="button large go" value="Go">
+			<input type="submit" name="go" class="button medium go" value="Go">
 	</div>
 	</div>
 	</form>
 	<br>
 	<br>
 	<form method="link" action="AdminUI.php">
-	<input type="submit" name="next" class="button large go" value="Return to Home">
+	<input type="submit" name="next" class="button small go" value="Return to Home">
 	</form>
 	<?php include('./workOrder/workButton.php'); ?>
 	<?php

@@ -83,12 +83,12 @@ session_start();
         </div>
 
 	<div class="nextButton">
-		<input type="submit" name="next" class="button large go" value="Create">
+		<input type="submit" name="next" class="button medium go" value="Create">
 	</div>
 	</div>
 	</form>
 		<form method="link" action="AdminUI.php" name="home">
-			<input type="submit" name="next" class="button large" value="Cancel">
+			<input type="submit" name="next" class="button small" value="Cancel">
 		</form>
 	<?php include('./workOrder/workButton.php'); ?>
 

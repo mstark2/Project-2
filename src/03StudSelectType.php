@@ -17,8 +17,8 @@ session_start();
 	<form action="StudProcessType.php" method="post" name="SelectType">
 	<div class="nextButton">
         <!-- Select individual or group appointment -->
-		<input type="submit" name="type" class="button large go" value="Individual">
-		<input type="submit" name="type" class="button large go" value="Group" style="float: right;">
+		<input type="submit" name="type" class="button medium go" value="Individual">
+		<input type="submit" name="type" class="button medium go" value="Group" style="float: right;">
 	    </div>
 		</div>
 		</form>
@@ -29,7 +29,7 @@ session_start();
 		<div>
         <!-- Cancel and return home -->
 		<form method="link" action="02StudHome.php">
-		<input type="submit" name="home" class="button large" value="Cancel">
+		<input type="submit" name="home" class="button small" value="Cancel">
 		</form>
 		</div>
   	<?php

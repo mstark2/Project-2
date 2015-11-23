@@ -70,18 +70,16 @@ session_start();
 
             
 		<div class="nextButton">
-			<input type="submit" name="next" class="button large go" value="Submit">
+			<input type="submit" name="next" class="button medium go" value="Submit">
 	    </div>
 		</form>
-		<form method="link" action="AdminUI.php">
-			<input type="submit" name="home" class="button large" value="Cancel">
-		</form>
+		
 
-	</div>
-	</div>
 	</div>
 	<?php
 		include ('footer.html');
 	?>
+	</div>
+	</div>
   </body>
 </html>
