@@ -64,6 +64,10 @@ session_start();
           <input type="checkbox" name="major[]" value="MENG" checked>Mechanical Engineering
           <input type="checkbox" name="major[]" value="CENG" checked>Chemical Engineering
       </div>
+      <div class="field">
+      	<label for="Meeting Room">Meeting Room</label>
+      	  <input type="text" name="meeting room" value="">
+      </div>
 
             <!-- Possible days to choose from -->
         <div class="field">
