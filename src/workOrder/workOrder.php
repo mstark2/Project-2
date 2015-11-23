@@ -52,11 +52,11 @@ function stage1($_GET)
 	
 	<input type="hidden" name="url" value='<?php echo($_GET["url"]); ?>'>
 
-	<input type="submit" name="next" class="button large go" value="Submit">
+	<input type="submit" name="next" class="button medium go" value="Submit">
 		<div>
 	</form>
 		<form method="link" action="">
-		<input type="submit" name="home" class="button large" value="Cancel" onClick="window.close()">
+		<input type="submit" name="home" class="button small" value="Cancel" onClick="window.close()">
 		</form>
 		</div>
 

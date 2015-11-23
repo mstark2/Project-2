@@ -108,18 +108,18 @@ $COMMON = new Common($debug);
 		?>
 		<br>
 		<form method="link" action="AdminUI.php">
-			<input type="submit" name="next" class="button large go" value="Return to Home">
+			<input type="submit" name="next" class="button medium go" value="Return to Home">
 		</form>
 	</div>
 	<div class="bottom">
 		<p><span style="color:red">!!</span> indicates that this appointment already exists. A repeat appointment was not made.</p>
 	</div>
-	</div>
-	</div>
-	</form>
 	<?php
 		include ('footer.html');
 	?>
+	</div>
+	</div>
+	</form>
   </body>
   
 </html>
