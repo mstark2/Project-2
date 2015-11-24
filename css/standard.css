@@ -1,5 +1,10 @@
 html{ 
-      background-color:#99CCFF; 
+      /*background-color:#99CCFF;*/
+	  background-color: #ffc20e;
+	  background-image: url("../background1.jpg");
+	  background-repeat: no-repeat;
+	  background-position: top left;
+	  background-attachment: fixed;
       font-family:Arial; 
       font-size:13px; 
       position:relative; 
@@ -7,7 +12,7 @@ html{
 
       body{ 
       margin:0; 
-      padding:0; 
+      padding:0;
       }
 
       a{ 
