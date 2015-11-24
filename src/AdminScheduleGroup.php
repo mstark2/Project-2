@@ -93,7 +93,7 @@ session_start();
 	</div>
 	</form>
 		<form method="link" action="AdminUI.php" name="home">
-			<input type="submit" name="next" class="button small" value="Cancel">
+			<input type="submit" name="next" class="button small go" value="Cancel">
 		</form>
 	<?php include('./workOrder/workButton.php'); ?>
 

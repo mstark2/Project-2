@@ -137,23 +137,70 @@ html{
         padding: 0 16px;
 		position: center;
 		margin-left: 0px;
+		font-weight: bold;
 	  }
 	  
 	  .button.small{
+		/*red*/
+		background-color: #ef343b;
+        color: #FFF;
 		font-size: 16px;
         height: 32px;
         padding: 0 16px;
 		margin-left: 0px;
-	  
+		font-weight: bold;
 	  }
+	  
+	  .button.small:hover{
+		/*red*/
+		background-color: #f14c52;
+        color: #FFF;
+	  }
+	  
+	  .button.large.go{
+		 background-color: #768089;
+		 color: #fff;
+	  }
+	  
+	  .button.large.go:hover{
+		background-color: #87929D;
+        color: #fff;
+        text-decoration: none;
+	  }
+	  
+	  .button.medium.go{
+		 background-color: #768089;
+		 color: #fff;
+	  }
+	  
+	  .button.medium.go:hover{
+		background-color: #87929D;
+        color: #fff;
+        text-decoration: none;
+	  }
+	  
+	  .button.small.go{
+		 /*red*/
+		background-color: #ef343b;
+        color: #FFF;
+	  }
+	  
+	  .button.small.go:hover{
+		/*red*/
+		background-color: #f14c52;
+        color: #FFF;
+	  }
+	  
       
       .button.go {
-        background-color: #66AA44;
+		/*red*/
+		background-color: #ef343b;
         color: #FFF;
       }
       
       .button.go:hover {
-        background-color: #70B74E;
+		/*red*/
+		background-color: #f14c52;
         color: #FFF;
       }
        
