@@ -24,9 +24,6 @@ session_start();
 		</div>
 		</form>
 
-
-<br>
-<br>
 		<div>
         <!-- Cancel and return home -->
 		<form method="link" action="02StudHome.php">

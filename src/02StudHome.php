@@ -21,6 +21,7 @@ error_reporting (E_ALL);
 			echo $_SESSION["firstN"];
 		?>
         </h2>
+		<br>
 	    <div class="selections">
 		<form action="StudProcessHome.php" method="post" name="Home">
 	    <?php
@@ -67,10 +68,10 @@ error_reporting (E_ALL);
 		?>
 		</form>
         </div>
+		</div>
 		<form action="Logout.php" method="post" name="Logout">
-	    <div class="logoutButton">
+		<div class="logoutButton">
 			<input type="submit" name="logout" class="button small go" value="Logout">
-	    </div>
 		</div>
 		</form>
 	<?php

@@ -31,14 +31,14 @@ $COMMON = new Common($debug);
 		?>
         </div>
 	    <div class="nextButton">
-			<input type="submit" name="next" class="button large go" value="Next">
+			<input type="submit" name="next" class="button medium go" value="Next">
 	    </div>
 		</div>
 		</form>
 		<div>
         <!-- Cancel and return home -->
 		<form method="link" action="02StudHome.php">
-		<input type="submit" name="home" class="button large" value="Cancel">
+		<input type="submit" name="home" class="button small" value="Cancel">
 		</form>
 		</div>
 	<?php

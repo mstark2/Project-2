@@ -43,6 +43,7 @@ $_SESSION["PassCon"] = false;
 		echo $row[0];
 	?>
 	</h2>
+	<br>
 	
 	<form action="AdminProcessUI.php" method="post" name="UI">
         <!-- Options for admin -->
