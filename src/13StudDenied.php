@@ -7,6 +7,7 @@ session_start();
     <meta charset="UTF-8" />
     <title>Exit Message</title>
 	<link rel='stylesheet' type='text/css' href='../css/standard.css'/>
+	<h2>UMBC COEIT Engineering and Computer Science Advising</h2>
   </head>
   <body>
     <div id="login">

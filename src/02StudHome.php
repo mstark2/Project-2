@@ -10,6 +10,7 @@ error_reporting (E_ALL);
     <meta charset="UTF-8" />
     <title>Student Advising Home</title>
 	<link rel='stylesheet' type='text/css' href='../css/standard.css'/>
+	<h2>UMBC COEIT Engineering and Computer Science Advising</h2>
   </head>
   <body>
     <div id="login">

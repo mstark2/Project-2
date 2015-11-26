@@ -8,6 +8,7 @@ $_SESSION["appTime"] = $_POST["appTime"]; // radio button selection from previou
     <meta charset="UTF-8" />
     <title>Confirm Appointment</title>
 	<link rel='stylesheet' type='text/css' href='../css/standard.css'/>  </head>
+	<h2>UMBC COEIT Engineering and Computer Science Advising</h2>
   <body>
 	<div id="login">
       <div id="form">

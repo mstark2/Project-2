@@ -14,12 +14,14 @@ session_start();
     }
     </script>
 	<link rel='stylesheet' type='text/css' href='../css/standard.css'/>
+	<h2>UMBC COEIT Engineering and Computer Science Advising</h2>
   </head> 
   <body>
     <div id="login">
       <div id="form">
         <div class="top">
           <h2>Select which appointment you would like to change: </h2>
+		  <p style='color:red'>Please note that individual appointments can only be removed from the schedule.</p>
 		  <div class="field">
 		  
           <?php
@@ -108,21 +110,19 @@ session_start();
 				
               }
               echo("</table>");
-
+			  echo("<br>");
               echo("<div class=\"nextButton\">");
-              echo("<input type=\"submit\" name=\"next\" class=\"button large go\" value=\"Delete Appointment\">");
+              echo("<input type=\"submit\" name=\"next\" class=\"button medium go\" value=\"Delete Appointment\">");
               echo("</div>");
 			  echo("</form>");
-			  echo("<form method=\"link\" action=\"AdminUI.php\">");
-              echo("<input type=\"submit\" name=\"next\" class=\"button large\" value=\"Cancel\">");
-              echo("</form>");
+			  
             }
             else{
               echo("<br><b>There are currently no individual appointments scheduled at the current moment.</b>");
               echo("<br><br>");
 			  echo("</td</tr>");
               echo("<form method=\"link\" action=\"AdminUI.php\">");
-              echo("<input type=\"submit\" name=\"next\" class=\"button large go\" value=\"Return to Home\">");
+              echo("<input type=\"submit\" name=\"next\" class=\"button medium\" value=\"Return to Home\">");
               echo("</form>");
             }
           ?>
@@ -130,15 +130,15 @@ session_start();
 	</div>
 	</div>
 	<div class="bottom">
-		<p style='color:red'>Please note that individual appointments can only be removed from schedule.</p>
-	</div>
+		<form method="link" action="AdminUI.php">
+			<input type="submit" name="next" class="button small go" value="Cancel">
+		</form>
 	</div>
 	<?php include('./workOrder/workButton.php'); ?>
-
+	<?php include ('footer.html'); ?>
 	</div>
-	<?php
-		include ('footer.html');
-	?>
+	</div>
+
   </body>
   
 </html>
