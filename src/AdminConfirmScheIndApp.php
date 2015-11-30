@@ -23,7 +23,7 @@ $COMMON = new Common($debug);
 			$majors = $_POST["major"];
 			$repeatDays = $_POST["repeat"];
 			$repeatWeek = $_POST["stepper"];
-			$meetingRoom = $_POST["meeting room"]
+			$meetingRoom = $_POST["meeting room"];
 			
 			//one week with given start date (Ex. Thur - Wed) ['Thursday']=>[########]
 			$d0 = $date;
