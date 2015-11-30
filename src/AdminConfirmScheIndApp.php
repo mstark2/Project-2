@@ -85,9 +85,11 @@ $COMMON = new Common($debug);
 			// room stuff
 			$User = $_SESSION["UserN"];
 			$Pass = $_SESSION["PassW"];
-			$office = "select `Office` from `Proj2Advisors` where `Username` = '$User' and `Password` = '$Pass'";
-			$rs = $COMMON->executeQuery($office, $_SERVER["SCRIPT_NAME"]);
+			$sql = "select `Office` from `Proj2Advisors` where `Username` = '$User' and `Password` = '$Pass'";
+			$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 			$roomPrint = "";
+			$row = mysql_fetch_row($rs);
+			$office = $row[5];
 			if(empty($meetingRoom)){
 				$roomPrint = $rs;
 			}
