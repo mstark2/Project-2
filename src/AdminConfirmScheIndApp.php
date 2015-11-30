@@ -23,6 +23,7 @@ $COMMON = new Common($debug);
 			$majors = $_POST["major"];
 			$repeatDays = $_POST["repeat"];
 			$repeatWeek = $_POST["stepper"];
+			$meetingRoom = $_POST["meeting room"]
 			
 			//one week with given start date (Ex. Thur - Wed) ['Thursday']=>[########]
 			$d0 = $date;
@@ -81,6 +82,17 @@ $COMMON = new Common($debug);
 				$majorPrint = substr($majorPrint, 0, -2);
 			}
 			
+			// room stuff
+			$office = "select 'Office' from 'Proj2Advisors' where 'Username' = $User and 'Password' = '$Pass'";
+			$roomPrint = "";
+			if(!empty($meetingRoom)){
+				$roomPrint = $office;
+			}
+			else {
+				$roomPrint = $meetingRoom;
+			}
+			
+			
 			//get advisor id
 			$User = $_SESSION["UserN"];
 			$Pass = $_SESSION["PassW"];
@@ -96,7 +108,7 @@ $COMMON = new Common($debug);
 				$sql = "SELECT * from `Proj2Appointments` where `Time` = '$dt' and `AdvisorID` = '$id'";
 				$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 				$row = mysql_fetch_row($rs);
-				echo date('l, F d, Y g:i A', strtotime($dt)), " <br> Majors: ", $majorPrint;
+				echo date('l, F d, Y g:i A', strtotime($dt)), " <br> Majors: ", $majorPrint, " <br> Meeting Room: ", $roomPrint;
 				if($row){
 					echo "<br><span style='color:red'>!!</span>";
 				}
