@@ -89,7 +89,7 @@ $COMMON = new Common($debug);
 			$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 			$roomPrint = "a";
 			$row = mysql_fetch_row($rs);
-			$office = $row[5];
+			$office = $row[4];
 			if($meetingRoom != '312'){
 				$roomPrint = $meetingRoom;
 			}
