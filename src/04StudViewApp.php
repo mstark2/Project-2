@@ -46,7 +46,7 @@ $studID = $_SESSION["studID"];
 				echo "Advisor: ", $advisorName, "<br>";
 				echo "Appointment: ", date('l, F d, Y g:i A', $datephp), "<br>";
                 //Added advisor office number when viewing appointment
-                echo "Advisor Office: ", $row2[5];
+                echo "Advisor Office: ", $row2[5], "<br>";
                 echo "Meeting Room: ", $row[7], "</label>";
 			}
 			else // something is up, and their DB table needs to be fixed
@@ -59,11 +59,11 @@ $studID = $_SESSION["studID"];
 
 		?>
         </div>
+		</div>
 	    <div class="finishButton">
             <!-- Nothing to do after viewing but return to home -->
-			<button onclick="location.href = '02StudHome.php'" class="button large go" >Return to Home</button>
+			<button onclick="location.href = '02StudHome.php'" class="button small go" >Return to Home</button>
 	    </div>
-		</div>
 		</form>
 	<?php
 		include ('footer.html');

@@ -75,16 +75,16 @@ $_SESSION["appTime"] = $_POST["appTime"]; // radio button selection from previou
 	    <div class="nextButton">
 		<?php
 			if($_SESSION["resch"] == true){
-				echo "<input type='submit' name='finish' class='button large go' value='Reschedule'>";
+				echo "<input type='submit' name='finish' class='button medium go' value='Reschedule'>";
 			}
 			else{
-				echo "<input type='submit' name='finish' class='button large go' value='Submit'>";
+				echo "<input type='submit' name='finish' class='button medium go' value='Submit'>";
 			}
 		?>
-			<input style="margin-left: 50px" type="submit" name="finish" class="button large" value="Cancel">
 	    </div>
-		</form>
 		</div>
+			<input type="submit" name="finish" class="button small go" value="Cancel">
+		</form>
 	<?php
 		include ('footer.html');
 	?>

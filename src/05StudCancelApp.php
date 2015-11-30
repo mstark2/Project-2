@@ -51,13 +51,13 @@ $COMMON = new Common($debug);
 	    <div class="finishButton">
             <!-- Cancel or Keep appointment -->
 			<form action = "StudProcessCancel.php" method = "post" name = "Cancel">
-			<input type="submit" name="cancel" class="button large go" value="Cancel">
-			<input type="submit" name="cancel" class="button large" value="Keep">
+			<input type="submit" name="cancel" class="button medium go" value="Cancel">
+			<input type="submit" name="cancel" class="button medium go" value="Keep" style="float: right;">
 			</form>
 	    </div>
 		</div>
 		<div class="bottom">
-			<p>Click "Cancel" to cancel appointment. Click "Keep" to keep appointment.</p>
+			<p style="font-size: 13px; color: red;">Click "Cancel" to cancel appointment. Click "Keep" to keep appointment.</p>
 		</div>
 		</form>
 	<?php

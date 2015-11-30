@@ -79,7 +79,7 @@ $advisorName = $row[1]." ".$row[2];
 	</div>
 		<div class="field">
 			<div class="bottom">
-				<p style="color:red; font-size: 15px;">If there are no more open appointments, contact your advisor or click <a href='02StudHome.php'>here</a> to start over.</p>
+				<p style="color:red; font-size: 15px;">If there are no more open appointments, contact your advisor or click <a href='07StudSelectAdvisor.php'>here</a> to start over.</p>
 			</div>
 			<!-- Cancel and return home -->
 			<form method="link" action="02StudHome.php">
