@@ -90,7 +90,7 @@ $COMMON = new Common($debug);
 			$roomPrint = "a";
 			$row = mysql_fetch_row($rs);
 			$office = $row[5];
-			if(!empty($meetingRoom)){
+			if($meetingRoom != '312'){
 				$roomPrint = $meetingRoom;
 			}
 			else {
