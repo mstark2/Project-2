@@ -89,7 +89,7 @@ $COMMON = new Common($debug);
 			$rs = $COMMON->executeQuery($office, $_SERVER["SCRIPT_NAME"]);
 			$roomPrint = "";
 			if(empty($meetingRoom)){
-				$roomPrint = $office;
+				$roomPrint = $rs;
 			}
 			else {
 				$roomPrint = $meetingRoom;
