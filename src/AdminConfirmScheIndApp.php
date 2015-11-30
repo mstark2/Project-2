@@ -94,6 +94,7 @@ $COMMON = new Common($debug);
 				$roomPrint = $meetingRoom;
 			}
 			else {
+				// gets lost. will not print for some weird reason
 				$roomPrint = $office;
 			}
 			
