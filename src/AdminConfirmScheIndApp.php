@@ -87,7 +87,7 @@ $COMMON = new Common($debug);
 			$Pass = $_SESSION["PassW"];
 			$office = "select 'Office' from 'Proj2Advisors' where 'Username' = '$User' and 'Password' = '$Pass'";
 			$roomPrint = "";
-			if(!empty($meetingRoom)){
+			if(empty($meetingRoom)){
 				$roomPrint = $office;
 			}
 			else {
