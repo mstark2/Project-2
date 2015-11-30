@@ -87,10 +87,10 @@ $COMMON = new Common($debug);
 			$Pass = $_SESSION["PassW"];
 			$sql = "select `Office` from `Proj2Advisors` where `Username` = '$User' and `Password` = '$Pass'";
 			$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
-			$roomPrint = "";
+			$roomPrint = "a";
 			$row = mysql_fetch_row($rs);
 			$office = $row[5];
-			if($meetingRoom == ""){
+			if(empty($meetingRoom)){
 				$roomPrint = $office;
 			}
 			else {
