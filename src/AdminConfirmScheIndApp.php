@@ -86,6 +86,7 @@ $COMMON = new Common($debug);
 			$User = $_SESSION["UserN"];
 			$Pass = $_SESSION["PassW"];
 			$office = "select 'Office' from 'Proj2Advisors' where 'Username' = '$User' and 'Password' = '$Pass'";
+			$rs = $COMMON->executeQuery($office, $_SERVER["SCRIPT_NAME"]);
 			$roomPrint = "";
 			if(empty($meetingRoom)){
 				$roomPrint = $office;
