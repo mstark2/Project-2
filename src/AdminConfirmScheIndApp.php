@@ -91,7 +91,7 @@ $COMMON = new Common($debug);
 			$row = mysql_fetch_row($rs);
 			$office = $row[5];
 			if(empty($meetingRoom)){
-				$roomPrint = $rs;
+				$roomPrint = $office;
 			}
 			else {
 				$roomPrint = $meetingRoom;
