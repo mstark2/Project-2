@@ -15,7 +15,6 @@ $_SESSION["Delete"] = false;
     }
     </script>
 	<link rel='stylesheet' type='text/css' href='../css/standard.css'/>
-	<h2>UMBC COEIT Engineering and Computer Science Advising</h2>
   </head> 
   <body>
     <div id="login">
@@ -75,30 +74,30 @@ $_SESSION["Delete"] = false;
 		echo("</table>");
                 //Delete or edit appointment
               echo("<div class=\"nextButton\">");
-              echo("<input type=\"submit\" name=\"next\" class=\"button medium go\" value=\"Delete Appointment\">");
+              echo("<input type=\"submit\" name=\"next\" class=\"button large go\" value=\"Delete Appointment\">");
               echo("<input style=\"margin-left: 10px\" type=\"submit\" name=\"next\" class=\"button large go\" value=\"Edit Appointment\">");
               echo("</div>");
 			  echo("</form>");
+			  echo("<form method=\"link\" action=\"AdminUI.php\">");
+              echo("<input type=\"submit\" name=\"next\" class=\"button large\" value=\"Cancel\">");
+              echo("</form>");
             }
             else{ //Appointment doesn't exist
               echo("<br><b>There are currently no group appointments scheduled at the current moment.</b>");
               echo("<br><br>");
               echo("<form method=\"link\" action=\"AdminUI.php\">");
-              echo("<input type=\"submit\" name=\"next\" class=\"button medium\" value=\"Return to Home\">");
+              echo("<input type=\"submit\" name=\"next\" class=\"button large go\" value=\"Return to Home\">");
               echo("</form>");
             }
           ?>
   </div>
   </div>
-   <form method="link" action="AdminUI.php">
-			<input type="submit" name="next" class="button small go" value="Cancel">
-		</form>
+  </div>
 	<?php include('./workOrder/workButton.php'); ?>
+  </div>
   	<?php
 		include ('footer.html');
 	?>
-  </div>
-  </div>
   </body>
   
 </html>

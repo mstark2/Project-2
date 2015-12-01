@@ -8,13 +8,12 @@ session_start();
     <meta charset="UTF-8" />
     <title>UMBC COEIT Engineering and Computer Science Advising Admin Sign In</title>
 	<link rel='stylesheet' type='text/css' href='../css/standard.css'/>
-	<h2>UMBC COEIT Engineering and Computer Science Advising</h2>
   </head>
   <body>
     <div id="login">
       <div id="form">
         <div class="top">
-		<!--<h1>UMBC COEIT Engineering and Computer Science Advising</h1>-->
+		<h1>UMBC COEIT Engineering and Computer Science Advising</h1>
 		<h2>Admin Sign In</h2>
 
     <?php

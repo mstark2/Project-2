@@ -17,7 +17,6 @@ $COMMON = new Common($debug);
     }
     </script>
     <link rel="stylesheet" type="text/css" href="../css/standard.css"/>
-	<h2>UMBC COEIT Engineering and Computer Science Advising</h2>
   </head>
   <body>
     <div id="login">
@@ -95,6 +94,8 @@ $COMMON = new Common($debug);
 	</div>
 	</div>
 	</form>
+	<br>
+	<br>
 	<form method="link" action="AdminUI.php">
 	<input type="submit" name="next" class="button small go" value="Return to Home">
 	</form>

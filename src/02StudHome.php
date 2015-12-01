@@ -10,7 +10,6 @@ error_reporting (E_ALL);
     <meta charset="UTF-8" />
     <title>Student Advising Home</title>
 	<link rel='stylesheet' type='text/css' href='../css/standard.css'/>
-	<h2>UMBC COEIT Engineering and Computer Science Advising</h2>
   </head>
   <body>
     <div id="login">
@@ -18,10 +17,12 @@ error_reporting (E_ALL);
         <div class="top">
 		<h2>Hello 
 		<?php
+            $sql = "select * from Proj2Students where `StudentID` = '$studid'";
+			$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
+			$row = mysql_fetch_row($rs);
 			echo $_SESSION["firstN"];
 		?>
         </h2>
-		<br>
 	    <div class="selections">
 		<form action="StudProcessHome.php" method="post" name="Home">
 	    <?php
@@ -68,10 +69,10 @@ error_reporting (E_ALL);
 		?>
 		</form>
         </div>
-		</div>
 		<form action="Logout.php" method="post" name="Logout">
-		<div class="logoutButton">
+	    <div class="logoutButton">
 			<input type="submit" name="logout" class="button small go" value="Logout">
+	    </div>
 		</div>
 		</form>
 	<?php

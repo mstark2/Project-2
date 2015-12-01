@@ -8,7 +8,6 @@ session_start();
     <meta charset="UTF-8" />
     <title>Create New Admin</title>
 	<link rel='stylesheet' type='text/css' href='../css/standard.css'/>
-	<h2>UMBC COEIT Engineering and Computer Science Advising</h2>
 
      <script type="text/javascript">
     //   window.onload = function () {

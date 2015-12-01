@@ -14,7 +14,6 @@ session_start();
     }
     </script>
     <link rel="stylesheet" type="text/css" href="../css/standard.css"/>
-	<h2>UMBC COEIT Engineering and Computer Science Advising</h2>
   </head>
   <body>
     <div id="login">
@@ -40,18 +39,16 @@ session_start();
 
 	         <br>
 
-        </form>
     	    <div class="nextButton">
     			<input type="submit" name="next" class="button medium go" value="Next">
-			</div>
+        </form>
+		
 	</div>
-	
-	<div class="bottom">
+	</div>
 		<form method="link" action="AdminUI.php">
-			<input type="submit" name="home" class="button small" value="Cancel">
+		<input type="submit" name="home" class="button small" style="margin-bottom: 10px" value="Cancel">
 		</form>
 	<?php include('./workOrder/workButton.php'); ?>
-	</div>
 	<?php
 		include ('footer.html');
 	?>

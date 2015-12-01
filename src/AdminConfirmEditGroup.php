@@ -16,7 +16,6 @@ $debug = false;
     }
     </script>
 	<link rel='stylesheet' type='text/css' href='../css/standard.css'/>
-	<h2>UMBC COEIT Engineering and Computer Science Advising</h2>
   </head>
   <body>
     <div id="login">

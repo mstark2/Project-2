@@ -8,7 +8,6 @@ session_start();
     <meta charset="UTF-8" />
     <title>Schedule Appointment</title>
 	<link rel='stylesheet' type='text/css' href='../css/standard.css'/>
-	<h2>UMBC COEIT Engineering and Computer Science Advising</h2>
   </head>
   <body>
     <div id="login">
@@ -28,7 +27,7 @@ session_start();
 	</div>
 		</form>
 		<form method="link" action="AdminUI.php">
-		<input type="submit" name="home" class="button small go" style="margin-bottom: 10px" value="Cancel">
+		<input type="submit" name="home" class="button small" style="margin-bottom: 10px" value="Cancel">
 		</form>
 	<?php
 		include ('footer.html');

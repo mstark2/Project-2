@@ -8,7 +8,6 @@ $_SESSION["appTime"] = $_POST["appTime"]; // radio button selection from previou
     <meta charset="UTF-8" />
     <title>Confirm Appointment</title>
 	<link rel='stylesheet' type='text/css' href='../css/standard.css'/>  </head>
-	<h2>UMBC COEIT Engineering and Computer Science Advising</h2>
   <body>
 	<div id="login">
       <div id="form">
@@ -75,16 +74,16 @@ $_SESSION["appTime"] = $_POST["appTime"]; // radio button selection from previou
 	    <div class="nextButton">
 		<?php
 			if($_SESSION["resch"] == true){
-				echo "<input type='submit' name='finish' class='button medium go' value='Reschedule'>";
+				echo "<input type='submit' name='finish' class='button large go' value='Reschedule'>";
 			}
 			else{
-				echo "<input type='submit' name='finish' class='button medium go' value='Submit'>";
+				echo "<input type='submit' name='finish' class='button large go' value='Submit'>";
 			}
 		?>
+			<input style="margin-left: 50px" type="submit" name="finish" class="button large" value="Cancel">
 	    </div>
-		</div>
-			<input type="submit" name="finish" class="button small go" value="Cancel">
 		</form>
+		</div>
 	<?php
 		include ('footer.html');
 	?>
