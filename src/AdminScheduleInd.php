@@ -68,7 +68,7 @@ session_start();
       
       <div class="field">
       	<label for="Meeting Room">Meeting Room</label>
-      	  <input type="text" name="meetingRoom" value="312">
+      	  <input type="text" name="meetingRoom" value="">
       </div>
 
             <!-- Possible days to choose from -->
