@@ -15,6 +15,7 @@ $_SESSION["PassCon"] = false;
     <meta charset="UTF-8" />
     <title>Admin Home</title>
 	<link rel='stylesheet' type='text/css' href='../css/standard.css'/>
+	<h2>UMBC COEIT Engineering and Computer Science Advising</h2>
   </head>
   <body>
     <div id="login">
@@ -42,6 +43,7 @@ $_SESSION["PassCon"] = false;
 		echo $row[0];
 	?>
 	</h2>
+	<br>
 	
 	<form action="AdminProcessUI.php" method="post" name="UI">
         <!-- Options for admin -->
@@ -54,20 +56,20 @@ $_SESSION["PassCon"] = false;
 	</form>
 	<br>
 
+          
+        </div>
+        <div class="bottom">
+          
 	<form method="link" action="Logout.php">
 		<input type="submit" name="next" class="button small go" value="Log Out">
 	</form>
-          
-        </div>
-        <div class="field">
-          
-        </div>
-	</div>
-
 	<?php include('./workOrder/workButton.php'); ?>
+        </div>
 	<?php
 		include ('footer.html');
 	?>
+	</div>
+
 
 </body>
   

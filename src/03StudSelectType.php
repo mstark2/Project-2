@@ -7,6 +7,7 @@ session_start();
     <meta charset="UTF-8" />
     <title>Select Advising Type</title>
 	<link rel='stylesheet' type='text/css' href='../css/standard.css'/>
+	<h2>UMBC COEIT Engineering and Computer Science Advising</h2>
   </head>
   <body>
     <div id="login">
@@ -23,9 +24,6 @@ session_start();
 		</div>
 		</form>
 
-
-<br>
-<br>
 		<div>
         <!-- Cancel and return home -->
 		<form method="link" action="02StudHome.php">

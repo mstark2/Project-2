@@ -39,29 +39,32 @@ function stage1($_GET)
   </head>
   <body>
     <div id="login">
-	Work order form for <?php echo($_GET['url']); ?>
+	<h2>Work order form for <?php echo($_GET['url']); ?></h2>
     <div id="form">
     <div class="top">
 
 	<form action="workOrder.php" method='post'>
-	Description: <br><textarea name='description' id='description' rows="5" cols="200"></textarea><br>
-	Priority: <br><input type="radio" name="priority" value="0" checked>None given<br>
-			<input type="radio" name="priority" value="1">1 (High)<br>
-			<input type="radio" name="priority" value="2">2<br>
-			<input type="radio" name="priority" value="3">3<br>
+	<h3 style="font-size: 20px; margin-bottom: 0px;">Description:</h3>
+	<br><textarea name='description' id='description' rows="5" cols="400"></textarea><br>
+	<h3 style="font-size: 20px; margin-bottom: 0px;">Priority:</h3>
+	<br><input type="radio" name="priority" value="0" checked><r>None given</r><br>
+			<input type="radio" name="priority" value="1"><class="radio"><r>1 (High)</r></radio><br>
+			<input type="radio" name="priority" value="2"><r>2</r><br>
+			<input type="radio" name="priority" value="3"><r>3</r><br><br>
 	
 	<input type="hidden" name="url" value='<?php echo($_GET["url"]); ?>'>
 
-	<input type="submit" name="next" class="button large go" value="Submit">
+	<input type="submit" name="next" class="button medium go" value="Submit">
 		<div>
 	</form>
-		<form method="link" action="">
-		<input type="submit" name="home" class="button large" value="Cancel" onClick="window.close()">
-		</form>
 		</div>
 
 
      </div>
+		<form method="link" action="">
+			<input type="submit" name="home" class="button small" value="Cancel" onClick="window.close()">
+		</form>
+		<?php include('../footer.html');?>
      </div>
      </div>
   </body>
@@ -100,7 +103,7 @@ function stage2($_POST)
     <div id="login">
 	Thank you. Work order entered.
 	<form action="">
-	<input type="submit" name="home" class="button large" value="Close" onClick="window.close()">
+	<input type="submit" name="home" class="button medium" value="Close" onClick="window.close()">
 	</form>
 	</div>
      </div>

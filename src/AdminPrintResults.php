@@ -15,6 +15,7 @@ $debug = false;
     }
     </script>
 	<link rel='stylesheet' type='text/css' href='../css/standard.css'/>
+	<h2>UMBC COEIT Engineering and Computer Science Advising</h2>
   </head>
   <body>
     <div id="login">
@@ -55,18 +56,18 @@ $debug = false;
 
 ?>
 	<form method="link" action="AdminUI.php">
-	<input type="submit" name="next" class="button large go" value="Return to Home">
-	<input type="button" name="print" class="button large go" value="Print" onClick="window.print()">
+	<input type="button" name="print" class="button medium go" value="Print" onClick="window.print()">
 	</form>
 
 	</div>
 	</div>
+	<form method="link" action="AdminUI.php" name="home">
+		<input type="submit" name="next" class="button small go" value="Return to Home">
+	</form>
 	<?php include('./workOrder/workButton.php'); ?>
+	<?php include ('footer.html'); ?>
 	</div>
 
-	<?php
-		include ('footer.html');
-	?>
   </body>
   
 </html>

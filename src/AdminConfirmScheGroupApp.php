@@ -9,6 +9,7 @@ $COMMON = new Common($debug);
 <html lang="en">
   <head>
 	<link rel='stylesheet' type='text/css' href='../css/standard.css'/>
+	<h2>UMBC COEIT Engineering and Computer Science Advising</h2>
   </head>
   <body>
     <div id="login">
@@ -109,18 +110,18 @@ $COMMON = new Common($debug);
           }
         ?>
         <br>
-        <form method="link" action="AdminUI.php">
-          <input type="submit" name="next" class="button large go" value="Return to Home">
-        </form>
       </div>
       <div class="bottom">
         <p><span style="color:red">!!</span> indicates that this appointment already exists. A repeat appointment was not made.</p>
+        <form method="link" action="AdminUI.php">
+          <input type="submit" name="next" class="button small go" value="Return to Home">
+        </form>
       </div>
-	</div>
-	</form>
 	<?php
 		include ('footer.html');
 	?>
+	</div>
+	</form>
   </body>
   
 </html>
