@@ -6,6 +6,7 @@ session_start();
 <html lang="en">
   <head>
 	<link rel='stylesheet' type='text/css' href='../css/standard.css'/>
+	<h2>UMBC COEIT Engineering and Computer Science Advising</h2>
   </head>
   <body>
     <div id="login">
@@ -26,7 +27,7 @@ session_start();
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
-	      <input id="Date" type="date" name="Date" placeholder="mm/dd/yyyy" min="2015-08-01" max="2015-10-30" required autofocus> (mm/dd/yyyy)
+	      <input id="Date" type="date" name="Date" placeholder="mm/dd/yyyy" min="2015-08-01" max="2016-11-30" required autofocus> (mm/dd/yyyy)
 	    </div>
 
         <!-- Possible appointment times to choose from -->
@@ -93,7 +94,7 @@ session_start();
 	</div>
 	</form>
 		<form method="link" action="AdminUI.php" name="home">
-			<input type="submit" name="next" class="button small" value="Cancel">
+			<input type="submit" name="next" class="button small go" value="Cancel">
 		</form>
 	<?php include('./workOrder/workButton.php'); ?>
 

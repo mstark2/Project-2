@@ -16,6 +16,7 @@ $studID = $_SESSION["studID"];
     <meta charset="UTF-8" />
     <title>View Appointment</title>
 	<link rel='stylesheet' type='text/css' href='../css/standard.css'/>
+	<h2>UMBC COEIT Engineering and Computer Science Advising</h2>
   </head>
   <body>
       <div id="login">
@@ -53,10 +54,10 @@ $studID = $_SESSION["studID"];
 
       ?>
         </div>
-	   <div class="finishButton">
-        <button onclick="location.href = '02StudHome.php'" class="button small go" >Return to Home</button>
-	    </div>
 		</div>
+	   <div class="finishButton">
+			<button onclick="location.href = '02StudHome.php'" class="button small go" >Return to Home</button>
+	    </div>
 		</form>
 	<?php
 		include ('footer.html');

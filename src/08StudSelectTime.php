@@ -26,6 +26,7 @@ $advisorName = $row[1]." ".$row[2];
     <meta charset="UTF-8" />
     <title>Select Appointment</title>
 	<link rel='stylesheet' type='text/css' href='../css/standard.css'/>
+	<h2>UMBC COEIT Engineering and Computer Science Advising</h2>
 
   </head>
   <body>
@@ -47,7 +48,7 @@ $advisorName = $row[1]." ".$row[2];
                 //Retrieve available individual appointments for  major with chosen advisor
 				$sql = "select * from Proj2Appointments where `EnrolledNum` = 0 and (`Major` like '%$localMaj%' or `Major` = '') and `Time` > '".date('Y-m-d H:i:s')."' and `AdvisorID` = ".$_POST['advisor']." order by `Time` ASC limit 30";
 				echo "<h2>Individual Advising</h2><br>";
-				echo "<label for='prompt'>Select appointment with ",$advisorName,":</label><br>";
+				echo "<label for='prompt'>Select appointment with ",$advisorName, " (maximum 30 minutes long):</label><br>";
 			}
 			else // for group conferences
 			{
@@ -72,21 +73,23 @@ $advisorName = $row[1]." ".$row[2];
 		?>
         </div>
 	    <div class="nextButton">
-			<input type="submit" name="next" class="button large go" value="Next">
+			<input type="submit" name="next" class="button medium go" value="Next">
 	    </div>
 		</form>
-		<div>
-        <!-- Cancel and return home -->
-		<form method="link" action="02StudHome.php">
-		<input type="submit" name="home" class="button large" value="Cancel">
-		</form>
+	</div>
+		<div class="field">
+			<div class="bottom">
+				<p style="color:red; font-size: 15px;">If there are no more open appointments, contact your advisor or click <a href='07StudSelectAdvisor.php'>here</a> to start over.</p>
+			</div>
+			<!-- Cancel and return home -->
+			<form method="link" action="02StudHome.php">
+				<input type="submit" name="home" class="button small" value="Cancel">
+			</form>
 		</div>
-		<div class="bottom">
-		<p>Note: Appointments are maximum 30 minutes long.</p>
-		<p style="color:red">If there are no more open appointments, contact your advisor or click <a href='02StudHome.php'>here</a> to start over.</p>
-		</div>
+	</div>
 	<?php
 		include ('footer.html');
 	?>
+	</div>
   </body>
 </html>

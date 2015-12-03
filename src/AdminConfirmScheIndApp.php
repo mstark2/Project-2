@@ -85,17 +85,17 @@ $COMMON = new Common($debug);
 			// room stuff
 			$User = $_SESSION["UserN"];
 			$Pass = $_SESSION["PassW"];
-			
-            $sql = "select * from `Proj2Advisors` where `Username` = '$User' and `Password` = '$Pass'";
+			$sql = "select `Office` from `Proj2Advisors` where `Username` = '$User' and `Password` = '$Pass'";
 			$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
-			$roomPrint = "";
+			$roomPrint = "a";
 			$row = mysql_fetch_row($rs);
-			$office = $row[5];
-
-			if(empty($meetingRoom)){
-				$roomPrint = $office;
-			} else {
+			$office = $row[4];
+			if($meetingRoom != '312'){
 				$roomPrint = $meetingRoom;
+			}
+			else {
+				// gets lost. will not print for some weird reason
+				$roomPrint = $office;
 			}
 			
 			
