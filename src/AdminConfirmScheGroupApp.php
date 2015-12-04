@@ -24,6 +24,7 @@ $COMMON = new Common($debug);
             $repeatDays = $_POST["repeat"];
             $repeatWeek = $_POST["stepper"];
             $studentLimit = $_POST["stepper1"];
+            $meetingRoom = $_POST["meetingRoom"];
           
           //one week with given start date (Ex. Thur - Wed) ['Thursday']=>[########]
           $d0 = $date;
