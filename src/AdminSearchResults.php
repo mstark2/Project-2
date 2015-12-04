@@ -236,22 +236,21 @@ $COMMON = new Common($debug);
 				}
 				?>
 				</label>
-		<form method="link" action="AdminUI.php" name="home">
-			<input type="submit" name="next" class="button large go" value="Return to Home">
-		</form>
 	</div>
 	</div>
 	</div>
 	<div class="bottom">
 		<p>If the Major category is followed by a blank, then it is open for all majors.</p>
 	</div>
+		<form method="link" action="AdminUI.php" name="home">
+			<input type="submit" name="next" class="button small go" value="Return to Home">
+		</form>
 	<?php include('./workOrder/workButton.php'); ?>
-
-	</div>
-	</form>
 	<?php
 		include ('footer.html');
 	?>
+	</div>
+	</form>
   </body>
   
 </html>
