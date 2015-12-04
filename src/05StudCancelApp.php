@@ -19,14 +19,19 @@ $COMMON = new Common($debug);
 		<h1>Cancel Appointment</h1>
 	    <div class="field">
 	    <?php
-            //Get student info
-			$firstn = $_SESSION["firstN"];
-			$lastn = $_SESSION["lastN"];
+      //Get student info
 			$studid = $_SESSION["studID"];
-			$major = $_SESSION["major"];
-			$email = $_SESSION["email"];
+
+			$sql = "select * from Proj2Appointments where `StudentID` = '$studid";
+			$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
+			$row = mysql_fetch_row($rs);
+
+			$firstn = $row[1]; //$_SESSION["firstN"];
+			$lastn = $row[2]; //$_SESSION["lastN"];
+			$email = $row[4]; //$_SESSION["email"];
+			$major = $row[5]; //$_SESSION["major"];
 			
-            //Retrieve current appointment
+      //Retrieve current appointment
 			$sql = "select * from Proj2Appointments where `EnrolledID` like '%$studid%'";
 			$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 			$row = mysql_fetch_row($rs);
@@ -41,7 +46,7 @@ $COMMON = new Common($debug);
 			}
 			else{$oldAdvisorName = "Group";} //Advisor is just group
 			
-            //Display appointment info
+      //Display appointment info
 			echo "<h2>Current Appointment</h2>";
 			echo "<label for='info'>";
 			echo "Advisor: ", $oldAdvisorName, "<br>";
@@ -49,7 +54,7 @@ $COMMON = new Common($debug);
 		?>		
         </div>
 	    <div class="finishButton">
-            <!-- Cancel or Keep appointment -->
+      <!-- Cancel or Keep appointment -->
 			<form action = "StudProcessCancel.php" method = "post" name = "Cancel">
 			<input type="submit" name="cancel" class="button medium go" value="Cancel">
 			<input type="submit" name="cancel" class="button medium go" value="Keep" style="float: right;">

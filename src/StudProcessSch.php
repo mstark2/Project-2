@@ -7,16 +7,23 @@ $COMMON = new Common($debug);
 if($_POST["finish"] == 'Cancel') {
 	$_SESSION["status"] = "none";
 } else {
-	$firstn = $_SESSION["firstN"];
-	$lastn = $_SESSION["lastN"];
 	$studid = $_SESSION["studID"];
-	$major = $_SESSION["major"];
-	$email = $_SESSION["email"];
+    
+    $sql = "select * from Proj2Students where `StudentID` = '$studid'";
+    $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
+    $row = mysql_fetch_row($rs);
+    
+	$firstn = $row[1]; //$_SESSION["firstN"];
+	$lastn = $row[2]; //$_SESSION["lastN"];
+	$email = $row[4]; //$_SESSION["email"];
+	$major = $row[5]; //$_SESSION["major"];
 	$advisor = $_SESSION["advisor"];
 
 
 	$apptime = $_SESSION["appTime"];
-	if($_SESSION["studExist"] == false){
+
+    
+	if(empty($row)){
 		$sql = "insert into Proj2Students (`FirstName`,`LastName`,`StudentID`,`Email`,`Major`) values ('$firstn','$lastn','$studid','$email','$major')";
 		$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 	}
