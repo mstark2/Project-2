@@ -74,9 +74,9 @@ $_SESSION["Delete"] = false;
 
 		echo("</table>");
                 //Delete or edit appointment
-              echo("<div class=\"nextButton\">");
+              echo("<div class=\"nextButton\"><br><br>");
               echo("<input type=\"submit\" name=\"next\" class=\"button medium go\" value=\"Delete Appointment\">");
-              echo("<input style=\"margin-left: 10px\" type=\"submit\" name=\"next\" class=\"button large go\" value=\"Edit Appointment\">");
+              echo("<input style=\"float: right;\" type=\"submit\" name=\"next\" class=\"button medium go\" value=\"Edit Appointment\">");
               echo("</div>");
 			  echo("</form>");
             }
@@ -84,7 +84,7 @@ $_SESSION["Delete"] = false;
               echo("<br><b>There are currently no group appointments scheduled at the current moment.</b>");
               echo("<br><br>");
               echo("<form method=\"link\" action=\"AdminUI.php\">");
-              echo("<input type=\"submit\" name=\"next\" class=\"button medium\" value=\"Return to Home\">");
+              echo("<input type=\"submit\" name=\"next\" class=\"button small go\" value=\"Return to Home\">");
               echo("</form>");
             }
           ?>

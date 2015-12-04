@@ -78,7 +78,7 @@ session_start();
 			?>
 			<br><br>
 			<form method="link" action="AdminUI.php">
-				<input type="submit" name="home" class="button large go" value="Return to Home">
+				<input type="submit" name="home" class="button small go" value="Return to Home">
 			</form>
 		</div>
     </div>    
@@ -90,11 +90,11 @@ session_start();
         }
 		?>
 	</div>
-	</div>
-	</form>
 	<?php
 		include ('footer.html');
 	?>
+	</div>
+	</form>
   </body>
   
 </html>

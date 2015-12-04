@@ -40,10 +40,10 @@ session_start();
 
 	         <br>
 
-        </form>
     	    <div class="nextButton">
     			<input type="submit" name="next" class="button medium go" value="Next">
 			</div>
+        </form>
 	</div>
 	
 	<div class="bottom">
