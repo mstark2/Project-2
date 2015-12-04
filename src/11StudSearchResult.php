@@ -155,7 +155,7 @@ $COMMON = new Common($debug);
         </div>
 		<form action="02StudHome.php" method="link">
 	    <div class="nextButton">
-			<input type="submit" name="done" class="button large go" value="Done">
+			<input type="submit" name="done" class="button medium go" value="Done">
 	    </div>
 		</form>
 		</div>
