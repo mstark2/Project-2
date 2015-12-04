@@ -93,7 +93,7 @@ $debug = false;
             echo("Student limit: $row[3]");
             echo("<br><br>");
             echo("<form method=\"link\" action=\"AdminUI.php\">");
-            echo("<input type=\"submit\" name=\"next\" class=\"button large go\" value=\"Return to Home\">");
+            echo("<input type=\"submit\" name=\"next\" class=\"button small go\" value=\"Return to Home\">");
             echo("</form>");
             echo("</div>");
             echo("<div class=\"bottom\">");
@@ -137,13 +137,13 @@ $debug = false;
 
             echo("<br><br>");
             echo("<form method=\"link\" action=\"AdminUI.php\">");
-            echo("<input type=\"submit\" name=\"next\" class=\"button large go\" value=\"Return to Home\">");
+            echo("<input type=\"submit\" name=\"next\" class=\"button small go\" value=\"Return to Home\">");
             echo("</form>");
           }
+		  echo("</div>");
+		  echo("</div>");
+		  echo("</div>");
         ?>
-	</div>
-	</div>
-	</div>
 	</form>
 	<?php
 		include ('footer.html');
