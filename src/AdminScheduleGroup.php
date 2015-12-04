@@ -60,11 +60,11 @@ session_start();
         <!-- Possible majors to choose from -->
       <div class="field">
         <label for="Majors">Majors</label>
-          <input type="checkbox" name="major[]" value="Computer Engineering" checked>Computer Engineering
-          <input type="checkbox" name="major[]" value="Computer Science" checked>Computer Science
-          <input type="checkbox" name="major[]" value="Mechanical Engineering" checked>Mechanical Engineering
-          <input type="checkbox" name="major[]" value="Chemical Engineering" checked>Chemical Engineering
-          <input type="checkbox" name="major[]" value="Engineering" checked>Engineering
+          <input type="checkbox" name="major[]" value="CMPE" checked>Computer Engineering
+          <input type="checkbox" name="major[]" value="CMSC" checked>Computer Science
+          <input type="checkbox" name="major[]" value="MENG" checked>Mechanical Engineering
+          <input type="checkbox" name="major[]" value="CENG" checked>Chemical Engineering
+          <input type="checkbox" name="major[]" value="ENGR" checked>Engineering
       </div>
 
         <!-- Possible days to choose from -->
