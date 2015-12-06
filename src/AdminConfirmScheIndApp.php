@@ -85,9 +85,9 @@ $COMMON = new Common($debug);
 			// room stuff
             $User = $_SESSION["UserN"];
             $Pass = $_SESSION["PassW"];
-            $sql = "select `Office` from `Proj2Advisors` where `Username` = '$User' and                     `Password` = '$Pass'";
+            $sql = "select `Office` from `Proj2Advisors` where `Username` = '$User' and `Password` = '$Pass'";
             
-            $sql = "select * from `Proj2Advisors` where `Username` = '$User' and `Password`                 = '$Pass'";
+            $sql = "select * from `Proj2Advisors` where `Username` = '$User' and `Password` = '$Pass'";
             $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
             $roomPrint = "";
             $row = mysql_fetch_row($rs);
@@ -120,7 +120,7 @@ $COMMON = new Common($debug);
 					echo "<br><span style='color:red'>!!</span>";
 				}
 				else{
-					$sql = "insert into Proj2Appointments (`Time`, `AdvisorID`, `Major`, `Max`) values ('$dt', '$id', '$majorDB',1)";
+					$sql = "insert into Proj2Appointments (`Time`, `AdvisorID`, `Major`, `Max`, `Room`) values ('$dt', '$id', '$majorDB',1,'$meetingRoom')";
 					$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 				}
 				echo "<br><br>";

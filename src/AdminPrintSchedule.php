@@ -26,6 +26,7 @@ session_start();
 	     	     <label for="date">Date</label>
                  <!-- Input date of appointments to print -->
              <input id="date" type="date" name="date" placeholder="mm/dd/yyyy" style="height:25px" required autofocus> 
+			<b>(mm/dd/yyyy)</b>
 	         </div>
 
 	         <div class="field">

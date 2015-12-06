@@ -22,7 +22,7 @@ $COMMON = new Common($debug);
       //Get student info
 			$studid = $_SESSION["studID"];
 
-			$sql = "select * from Proj2Appointments where `StudentID` = '$studid";
+			$sql = "select * from Proj2Appointments where `EnrolledID` like '%$studID%'";
 			$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 			$row = mysql_fetch_row($rs);
 

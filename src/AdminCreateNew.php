@@ -47,16 +47,16 @@
                 $rs = $Common->executeQuery($sql, "Advising Appointments");
             }
 		?>
+	</div>
+	</div>
 		<form method="link" action="AdminUI.php">
-			<input type="submit" name="next" class="button large go" value="Return to Home">
+			<input type="submit" name="next" class="button small go" value="Return to Home">
 		</form>
-	</div>
-	</div>
-	</div>
-	</form>
 	<?php
 		include ('footer.html');
 	?>
+	</div>
+	</form>
   </body>
   
 </html>

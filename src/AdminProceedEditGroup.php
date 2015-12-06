@@ -44,25 +44,28 @@ session_start();
             echo("<input type=\"number\" id=\"stepper\" name=\"stepper\" min=\"$row[2]\" max=\"$row[3]\" value=\"$row[3]\" />");
 
             echo("<br><br>");
+            if($row[2] > 0){ //At least one student enrolled
+              echo "<p style='color:red'>Note: There are currently $row[2] students enrolled in this appointment.
+                    The student limit cannot be changed to be under this amount.</p>";
+            }
 
-            echo("<div class=\"nextButton\">");
-            echo("<input type=\"submit\" name=\"next\" class=\"button small go\" value=\"Submit\">");
+            echo("<br><div class=\"nextButton\">");
+            echo("<input type=\"submit\" name=\"next\" class=\"button medium go\" value=\"Submit\">");
             echo("</div>");
             echo("</div>");
             echo("<div class=\"bottom\">");
-            if($row[2] > 0){ //At least one student enrolled
-              echo "<p style='color:red'>Note: There are currently $row[2] students enrolled in this appointment. <br>
-                    The student limit cannot be changed to be under this amount.</p>";
-            }
             echo("</div>");
           ?>
 		  </div>
-  </div>
+  </form>
+		  <form method="link" action="AdminUI.php">
+			<input type="submit" name="next" class="button small go" value="Cancel">
+		</form>
   	<?php
 		include ('footer.html');
 	?>
   </div>
-  </form>
+  </div>
   </body>
   
 </html>

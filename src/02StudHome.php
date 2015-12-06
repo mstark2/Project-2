@@ -27,7 +27,7 @@ error_reporting (E_ALL);
 			$sql = "select * from Proj2Students where `StudentID` = '$studid'";
 			$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 			$row = mysql_fetch_row($rs);
-
+	
 			echo $row[1];
 		?>
     </h2>
@@ -49,7 +49,7 @@ error_reporting (E_ALL);
 				}
 			}
             
-			//Student doesn't exist, administrator canceled the appointment, or student just doesn't have an appointment yet
+			//Student doesn't exist, administrator cancelled the appointment, or student just doesn't have an appointment yet
 			if ($studExist == false || $adminCancel == true || $noApp == true){
 				if($adminCancel == true){
 					echo "<p style='color:red'>The advisor has cancelled your appointment! Please schedule a new appointment.</p>";

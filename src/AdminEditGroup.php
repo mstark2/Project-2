@@ -83,9 +83,6 @@ $_SESSION["Delete"] = false;
             else{ //Appointment doesn't exist
               echo("<br><b>There are currently no group appointments scheduled at the current moment.</b>");
               echo("<br><br>");
-              echo("<form method=\"link\" action=\"AdminUI.php\">");
-              echo("<input type=\"submit\" name=\"next\" class=\"button small go\" value=\"Return to Home\">");
-              echo("</form>");
             }
           ?>
   </div>

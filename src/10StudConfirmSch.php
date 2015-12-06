@@ -29,6 +29,8 @@ $_SESSION["appTime"] = $_POST["appTime"]; // radio button selection from previou
 			$major = $_SESSION["major"];
 			$email = $_SESSION["email"];
 			
+			
+			
 			if($_SESSION["resch"] == true){ //Student wants to reschedule
                 //Retrieve student's current appointment based on student ID
 				$sql = "select * from Proj2Appointments where `EnrolledID` like '%$studid%'";
@@ -70,6 +72,7 @@ $_SESSION["appTime"] = $_POST["appTime"]; // radio button selection from previou
 			echo "<label for='newinfo'>";
 			echo "Advisor: ",$currentAdvisorName,"<br>";
 			echo "Appointment: ",date('l, F d, Y g:i A', $currentDatephp),"</label>";
+			
 		?>
         </div>
 	    <div class="nextButton">

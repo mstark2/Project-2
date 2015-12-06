@@ -45,9 +45,8 @@ $studID = $_SESSION["studID"];
 				echo "<label for='info'>";
 				echo "Advisor: ", $advisorName, "<br>";
 				echo "Appointment: ", date('l, F d, Y g:i A', $datephp), "<br>";
-                //Added advisor office number when viewing appointment
-                echo "Advisor Office: ", $row2[5], "<br>";
-                echo "Meeting Room: ", $row[6], "</label>";
+				/* Do not need to show the advisor's office */
+                echo "Meeting Room: ", $row[7], "</label>";
 			}
 			else // something is up, and their DB table needs to be fixed
 			{

@@ -22,11 +22,11 @@ if($_POST["finish"] == 'Cancel') {
 
 	$apptime = $_SESSION["appTime"];
 
-    
-	if(empty($row)){
+    //this should'nt be needed. Student added in StudProcessSignIn.php
+	/* if(empty($row)){
 		$sql = "insert into Proj2Students (`FirstName`,`LastName`,`StudentID`,`Email`,`Major`) values ('$firstn','$lastn','$studid','$email','$major')";
 		$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
-	}
+	} */
     
     
 	// ************************ Lupoli 9-1-2015

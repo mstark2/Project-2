@@ -52,11 +52,6 @@ session_start();
        
       </div>
       
-      <div class="field">
-      	<label for="Meeting Room">Meeting Room</label>
-      	  <input type="text" name="meeting room" value="">
-      </div>
-
         <!-- Possible majors to choose from -->
       <div class="field">
         <label for="Majors">Majors</label>
@@ -64,9 +59,15 @@ session_start();
           <input type="checkbox" name="major[]" value="CMSC" checked>Computer Science
           <input type="checkbox" name="major[]" value="MENG" checked>Mechanical Engineering
           <input type="checkbox" name="major[]" value="CENG" checked>Chemical Engineering
-          <input type="checkbox" name="major[]" value="ENGR" checked>Engineering
+          <input type="checkbox" name="major[]" value="ENGR" checked>Engineering Undecided
       </div>
 
+	  <!-- Meeting room -->
+      <div class="field">
+      	<label for="Meeting Room">Meeting Room</label>
+      	  <input type="text" name="meetingRoom" maxlength= '8' value="">
+      </div>
+	  
         <!-- Possible days to choose from -->
         <div class="field">
             <label for="Repeat">Repeat Weekly</label>
