@@ -93,7 +93,7 @@ $COMMON = new Common($debug);
 							array_push($results, $found);
 						}
 					}
-				
+                }
 				else{ //Display available appointments for specified times
 					if($advisor == 'I'){ //Individual advisor
 						foreach($times as $t){ //Retrieve appointments for selected times
