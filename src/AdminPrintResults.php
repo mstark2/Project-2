@@ -31,13 +31,13 @@ $debug = false;
 	$COMMON = new Common($debug);
 
         //Cache username
-      $User = $_SESSION["UserN"];
+      $id = $_SESSION["userID"];
 
-        //Get advisor ID and name by username
-      $sql = "SELECT `id`, `firstName`, `lastName` FROM `Proj2Advisors` WHERE `Username` = '$User'";
+        //Get advisor username and name by id
+      $sql = "SELECT * FROM `Proj2Advisors` WHERE `id` = '$id'";
       $rs = $COMMON->executeQuery($sql, "Advising Appointments");
       $row = mysql_fetch_row($rs);
-      $id = $row[0];
+      $User = $row[3];
       $FirstName = $row[1];
       $LastName = $row[2];
 		

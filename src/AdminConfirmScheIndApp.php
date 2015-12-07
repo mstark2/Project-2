@@ -83,13 +83,16 @@ $COMMON = new Common($debug);
 			}
 			
 			// room stuff
-            $User = $_SESSION["UserN"];
-            $Pass = $_SESSION["PassW"];
-            $sql = "select * from `Proj2Advisors` where `Username` = '$User' and `Password` = '$Pass'";
+            $id = $_SESSION["userID"];
+            $sql = "select * from `Proj2Advisors` where `id` = '$id'";
             $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
-            $roomPrint = "";
             $row = mysql_fetch_row($rs);
+            
+            $User = $row[3];
+            $Pass = $row[4];
+            
             $office = $row[5];
+            $roomPrint = "";
 						
             if(!empty($meetingRoom)){
                 $roomPrint = $meetingRoom;

@@ -21,18 +21,18 @@ $debug = false;
 $Common = new Common($debug);
 
 //Get username and password
-$_SESSION["UserN"] = strtoupper($_POST["UserN"]);
-$_SESSION["PassW"] = strtoupper($_POST["PassW"]);
-$_SESSION["UserVal"] = false;
-
-//Cache username and password
-$user = $_SESSION["UserN"];
-$pass = $_SESSION["PassW"];
+$user = strtoupper($_POST["UserN"]);
+$pass = strtoupper($_POST["PassW"]);
 
 //Retrieve advisor based on username and password
 $sql = "SELECT * FROM `Proj2Advisors` WHERE `Username` = '$user' AND `Password` = '$pass'";
 $rs = $Common->executeQuery($sql, "Advising Appointments");
 $row = mysql_fetch_row($rs);
+
+$_SESSION["userID"] = $row[0]; //userID is advisor table's primary key
+$_SESSION["UserVal"] = false;
+
+
 
 if($row){ //Found match, sign in succeeded
 	if($debug) { echo("<br>".var_dump($_SESSION)."<- Session variables above<br>"); }

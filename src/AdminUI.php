@@ -24,19 +24,18 @@ $_SESSION["PassCon"] = false;
 	<h2> Hello 
 	<?php
 
-	if(!isset($_SESSION["UserN"])) // someone landed this page by accident
+	if(!isset($_SESSION["userID"])) // someone landed this page by accident
 	{
 		return;
 	}		
 
-        //Cache username and password
-		$User = $_SESSION["UserN"];
-		$Pass = $_SESSION["PassW"];
+        $id = $_SESSION["userID"];
+        //Retrieve the advisor based on id
+		$sql = "SELECT `firstName` FROM `Proj2Advisors` WHERE `id` = '$id'";
 
-        //Retrieve the advisor based on username and password
-		$sql = "SELECT `firstName` FROM `Proj2Advisors` 
-			WHERE `Username` = '$User' 
-			and `Password` = '$Pass'";
+        //Get username and password
+		$User = $row[3];
+		$Pass = $row[4];
 
 		$rs = $COMMON->executeQuery($sql, $_SERVER["AdminUI"]);
 		$row = mysql_fetch_row($rs);
