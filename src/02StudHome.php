@@ -31,6 +31,7 @@ error_reporting (E_ALL);
 			echo $row[1];
 		?>
     </h2>
+	<br>
 	  <div class="selections">
 		<form action="StudProcessHome.php" method="post" name="Home">
 	    <?php
