@@ -7,7 +7,7 @@ $COMMON = new Common($debug);
 if($_POST["cancel"] == 'Cancel'){ //Did indeed cancel
     $studid = $_SESSION["studID"];
 
-    $sql = "select * from Proj2Appointments where `EnrolledID` like '%$studID%'";
+    $sql = "select * from Proj2Students where `StudentID` like '%$studID%'";
     $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
     $row = mysql_fetch_row($rs);
 

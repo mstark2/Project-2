@@ -64,12 +64,21 @@ $COMMON = new Common($debug);
 				?>
 				<br><br><label>
 				<?php
+                //Get major
+                $studid = $_SESSION["studID"];
+
+                $sql = "select * from Proj2Students where `StudentID` like '%$studID%'";
+                $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
+                $row = mysql_fetch_row($rs);
+
+                $major = $row[5];
+
 				if(empty($times)){ //No time specified
 					if($advisor == 'I'){ //Retrieve individual appointments
-						$sql = "select * from Proj2Appointments where `Time` like '%$date%' and `Time` > '".date('Y-m-d H:i:s')."' and `AdvisorID` != 0 and `EnrolledNum` = 0 and `Major` like '%".$_SESSION['major']."%' order by `Time` ASC Limit 30";
+						$sql = "select * from Proj2Appointments where `Time` like '%$date%' and `Time` > '".date('Y-m-d H:i:s')."' and `AdvisorID` != 0 and `EnrolledNum` = 0 and `Major` like '%".$major."%' order by `Time` ASC Limit 30";
 					}
 					else{ //Retrieve group appointments
-						$sql = "select * from Proj2Appointments where `Time` like '%$date%' and `Time` > '".date('Y-m-d H:i:s')."' and `AdvisorID` like '%$advisor%' and `EnrolledNum` = 0 and `Major` like '%".$_SESSION['major']."%' order by `Time` ASC Limit 30";
+						$sql = "select * from Proj2Appointments where `Time` like '%$date%' and `Time` > '".date('Y-m-d H:i:s')."' and `AdvisorID` like '%$advisor%' and `EnrolledNum` = 0 and `Major` like '%".$major."%' order by `Time` ASC Limit 30";
 						
 					}
                     //moved executeQuery from if/else block
@@ -97,7 +106,7 @@ $COMMON = new Common($debug);
 				else{ //Display available appointments for specified times
 					if($advisor == 'I'){ //Individual advisor
 						foreach($times as $t){ //Retrieve appointments for selected times
-							$sql = "select * from Proj2Appointments where `Time` like '%$date%' and `Time` > '".date('Y-m-d H:i:s')."' and `Time` like '%$t%' and `AdvisorID` != 0 and `EnrolledNum` = 0 and `Major` like '%".$_SESSION['major']."%' order by `Time` ASC Limit 30";
+							$sql = "select * from Proj2Appointments where `Time` like '%$date%' and `Time` > '".date('Y-m-d H:i:s')."' and `Time` like '%$t%' and `AdvisorID` != 0 and `EnrolledNum` = 0 and `Major` like '%".$major."%' order by `Time` ASC Limit 30";
 							$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 							$row = mysql_fetch_row($rs);
 							$rsA = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
@@ -119,7 +128,7 @@ $COMMON = new Common($debug);
 					}
 					else{ //Group advisor
 						foreach($times as $t){ //Retrieve appointments for selected times
-							$sql = "select * from Proj2Appointments where `Time` like '%$date%' and `Time` > '".date('Y-m-d H:i:s')."' and `Time` like '%$t%' and `AdvisorID` like '%$advisor%' and `EnrolledNum` = 0 and `Major` like '%".$_SESSION['major']."%' order by `Time` ASC Limit 30";
+							$sql = "select * from Proj2Appointments where `Time` like '%$date%' and `Time` > '".date('Y-m-d H:i:s')."' and `Time` like '%$t%' and `AdvisorID` like '%$advisor%' and `EnrolledNum` = 0 and `Major` like '%".$major."%' order by `Time` ASC Limit 30";
 							$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 							$row = mysql_fetch_row($rs);
 							if($row){

@@ -15,7 +15,17 @@ session_start();
         <div class="top">
 	    <div class="statusMessage">
 	    <?php
-			$_SESSION["resch"] = false;			
+			$_SESSION["resch"] = false;
+            
+            //Get student info
+			$studid = $_SESSION["studID"];
+
+			$sql = "select * from Proj2Students where `StudentID` like '%$studID%'";
+			$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
+			$row = mysql_fetch_row($rs);
+            
+            //used to be assigned to session vars
+			$status = $row[6];
             
             //Display message based on the student's status after processing appointment
 			if($_SESSION["status"] == "complete"){ //Completed sign up with no problems
