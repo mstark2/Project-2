@@ -14,6 +14,23 @@ $studid = $_SESSION["studID"];
 $email = $_POST["email"];
 $major = $_POST["major"];
 
+//make sure the abbreviation is added to the DB 
+if($major == "Computer Science"){
+	$major = "CMSC";
+}
+else if($major == "Computer Engineering"){
+	$major = "CMPE";
+}
+else if($major == "Mechanical Engineering"){
+	$major = "MENG";
+}
+else if($major == "Chemical Engineering"){
+	$major = "CENG";
+}
+else if($major == "Engineering Undecided"){
+	$major = "ENGR";
+}
+
 $debug = false;
 include('../CommonMethods.php');
 $COMMON = new Common($debug);
