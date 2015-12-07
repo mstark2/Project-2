@@ -1,22 +1,18 @@
 <?php
 session_start();
 
-$_SESSION["firstN"] = strtoupper($_POST["firstN"]);
-$_SESSION["lastN"] = strtoupper($_POST["lastN"]);
-$_SESSION["studID"] = strtoupper($_POST["studID"]);
-$_SESSION["email"] = $_POST["email"];
-$_SESSION["major"] = $_POST["major"];
-
-
 //add student to the database if they are new
 $debug = false;
 include('../CommonMethods.php');
 $COMMON = new Common($debug);
-$studid = $_SESSION["studID"];
-$firstn = $_SESSION["firstN"];
-$lastn = $_SESSION["lastN"];
-$email = $_SESSION["email"];
-$major = $_SESSION["major"];
+
+$firstn = strtoupper($_POST["firstN"]);
+$lastn = strtoupper($_POST["lastN"]);
+$studid = strtoupper($_POST["studID"]);
+$email = $_POST["email"];
+$major = $_POST["major"];
+
+$_SESSION["studID"] = $studid;
 
 //make sure the abbreviation is added to the DB
 if($major == "Computer Science"){
@@ -43,6 +39,13 @@ if(empty($row)){
 $sql = "insert into Proj2Students (`FirstName`,`LastName`,`StudentID`,`Email`,`Major`, `Status`) values ('$firstn','$lastn','$studid','$email','$major', 'N')";
 $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 }
+
+	
+//remove once done with session
+$_SESSION["firstN"] = $firstn;
+$_SESSION["lastN"] = $lastn;
+$_SESSION["email"] = $email;
+$_SESSION["major"] = $major;
 
 header('Location: 02StudHome.php');
 ?>

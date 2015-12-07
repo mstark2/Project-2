@@ -4,15 +4,20 @@ $debug = false;
 
 //Set session advisor
 if(isset($_POST["advisor"])){
-	$_SESSION["advisor"] = $_POST["advisor"];
+	$localAdvisor = $_POST["advisor"];
+} else {
+    $localAdvisor = "Group";
 }
 
-//Cache advisor and major
-$localAdvisor = $_SESSION["advisor"];
-$localMaj = $_SESSION["major"];
-
+//Get major
 include('../CommonMethods.php');
 $COMMON = new Common($debug);
+
+$studid = $_SESSION["studID"];
+$sql = "select * from Proj2Students where `StudentID` = '$studid'";
+$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
+$row = mysql_fetch_row($rs);
+$localMaj = $row[5];
 
 //Retrieve the chosen advisor
 $sql = "select * from Proj2Advisors where `id` = '$localAdvisor'";

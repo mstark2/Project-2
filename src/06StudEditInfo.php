@@ -18,6 +18,11 @@ while($row = mysql_fetch_row($rs)){
 		$_SESSION["lastN"] = $row[2];
 		$_SESSION["email"] = $row[4];
 		$_SESSION["major"] = $row[5];
+        
+        $firstn = $row[1];
+        $lastn = $row[2];
+        $email = $row[4];
+        $major = $row[5];
 	}
 }
 
@@ -40,11 +45,11 @@ while($row = mysql_fetch_row($rs)){
 			<form action="StudProcessEdit.php" method="post" name="Edit">
 			<div class="field">
 				<label for="firstN">First Name</label>
-				<input id="firstN" size="30" maxlength="50" type="text" name="firstN" required value=<?php echo $_SESSION["firstN"]?>>
+				<input id="firstN" size="30" maxlength="50" type="text" name="firstN" required value=<?php echo $firstn?>>
 			</div>
 			<div class="field">
 			  <label for="lastN">Last Name</label>
-			  <input id="lastN" size="30" maxlength="50" type="text" name="lastN" required value=<?php echo $_SESSION["lastN"]?>>
+			  <input id="lastN" size="30" maxlength="50" type="text" name="lastN" required value=<?php echo $lastn?>>
 			</div>
 			<div class="field">
 				<label for="studID">Student ID</label>
@@ -52,56 +57,56 @@ while($row = mysql_fetch_row($rs)){
 			</div>
 			<div class="field">
 				<label for="email">E-mail</label>
-				<input id="email" size="30" maxlength="255" type="email" name="email" required value=<?php echo $_SESSION["email"]?>>
+				<input id="email" size="30" maxlength="255" type="email" name="email" required value=<?php echo $email?>>
 			</div>
 			<div class="field">
 				  <label for="major">Major</label>
 				  <select id="major" name = "major">
                     <!-- Change major, shows which one was selected -->
-					<option <?php if($row[5] == 'Computer Engineering'){echo("selected");}?>>Computer Engineering</option>
-					<option <?php if($row[5] == 'Computer Science'){echo("selected");}?>>Computer Science</option>
-					<option <?php if($row[5] == 'Mechanical Engineering'){echo("selected");}?>>Mechanical Engineering</option>
-					<option <?php if($row[5] == 'Chemical Engineering '){echo("selected");}?>>Chemical Engineering</option>
+					<option <?php if($major == 'Computer Engineering'){echo("selected");}?>>Computer Engineering</option>
+					<option <?php if($major == 'Computer Science'){echo("selected");}?>>Computer Science</option>
+					<option <?php if($major == 'Mechanical Engineering'){echo("selected");}?>>Mechanical Engineering</option>
+					<option <?php if($major == 'Chemical Engineering '){echo("selected");}?>>Chemical Engineering</option>
 <!-- someday
-					<option <?php if($row[5] == 'Africana Studies'){echo("selected");}?>>Africana Studies</option>
-					<option <?php if($row[5] == 'American Studies'){echo("selected");}?>>American Studies</option>
-					<option <?php if($row[5] == 'Ancient Studies'){echo("selected");}?>>Ancient Studies</option>
-					<option <?php if($row[5] == 'Anthropology'){echo("selected");}?>>Anthropology</option>
-					<option <?php if($row[5] == 'Asian Studies'){echo("selected");}?>>Asian Studies</option>
-					<option <?php if($row[5] == 'Biochemistry and Molecular Biology'){echo("selected");}?>>Biochemistry and Molecular Biology</option>
-					<option <?php if($row[5] == 'Bioinformatics and Computational Biology'){echo("selected");}?>>Bioinformatics and Computational Biology</option>
-					<option <?php if($row[5] == 'Biological Sciences'){echo("selected");}?>>Biological Sciences</option>
-					<option <?php if($row[5] == 'Business Technology Administration'){echo("selected");}?>>Business Technology Administration</option>
-					<option <?php if($row[5] == 'Chemistry'){echo("selected");}?>>Chemistry</option>
-					<option <?php if($row[5] == 'Dance'){echo("selected");}?>>Dance</option>
-					<option <?php if($row[5] == 'Economics'){echo("selected");}?>>Economics</option>
-					<option <?php if($row[5] == 'Financial Economics'){echo("selected");}?>>Financial Economics</option>
-					<option <?php if($row[5] == 'Emergency Health Services'){echo("selected");}?>>Emergency Health Services</option>
-					<option <?php if($row[5] == 'English'){echo("selected");}?>>English</option>
-					<option <?php if($row[5] == 'Environmental Science and Environmental Studies'){echo("selected");}?>>Environmental Science and Environmental Studies</option>
-					<option <?php if($row[5] == 'Gender and Womens Studies'){echo("selected");}?>>Gender and Womens Studies</option>
-					<option <?php if($row[5] == 'Geography'){echo("selected");}?>>Geography</option>
-					<option <?php if($row[5] == 'Global Studies'){echo("selected");}?>>Global Studies</option>
-					<option <?php if($row[5] == 'Health Administration and Policy'){echo("selected");}?>>Health Administration and Policy</option>
-					<option <?php if($row[5] == 'History'){echo("selected");}?>>History</option>
-					<option <?php if($row[5] == 'Information Systems'){echo("selected");}?>>Information Systems</option>
-					<option <?php if($row[5] == 'Interdisciplinary Studies'){echo("selected");}?>>Interdisciplinary Studies</option>
-					<option <?php if($row[5] == 'Management of Aging Services'){echo("selected");}?>>Management of Aging Services</option>
-					<option <?php if($row[5] == 'Mathematics'){echo("selected");}?>>Mathematics</option>
-					<option <?php if($row[5] == 'Statistics'){echo("selected");}?>>Statistics</option>
-					<option <?php if($row[5] == 'Media and Communication Studies'){echo("selected");}?>>Media and Communication Studies</option>
-					<option <?php if($row[5] == 'Modern Languages, Linguistics and Intercultural Communication'){echo("selected");}?>>Modern Languages, Linguistics and Intercultural Communication</option>
-					<option <?php if($row[5] == 'Music'){echo("selected");}?>>Music</option>
-					<option <?php if($row[5] == 'Philosophy'){echo("selected");}?>>Philosophy</option>
-					<option <?php if($row[5] == 'Physics'){echo("selected");}?>>Physics</option>
-					<option <?php if($row[5] == 'Political Sciences'){echo("selected");}?>>Political Science</option>
-					<option <?php if($row[5] == 'Psychology'){echo("selected");}?>>Psychology</option>
-					<option <?php if($row[5] == 'Social Work'){echo("selected");}?>>Social Work</option>
-					<option <?php if($row[5] == 'Sociology'){echo("selected");}?>>Sociology</option>
-					<option <?php if($row[5] == 'Theatre'){echo("selected");}?>>Theatre</option>
-					<option <?php if($row[5] == 'Visual Arts'){echo("selected");}?>>Visual Arts</option>
-					<option <?php if($row[5] == 'Undecided'){echo("selected");}?>>Undecided</option>
-					<option <?php if($row[5] == 'Other'){echo("selected");}?>>Other</option>
+					<option <?php if($major == 'Africana Studies'){echo("selected");}?>>Africana Studies</option>
+					<option <?php if($major == 'American Studies'){echo("selected");}?>>American Studies</option>
+					<option <?php if($major == 'Ancient Studies'){echo("selected");}?>>Ancient Studies</option>
+					<option <?php if($major == 'Anthropology'){echo("selected");}?>>Anthropology</option>
+					<option <?php if($major == 'Asian Studies'){echo("selected");}?>>Asian Studies</option>
+					<option <?php if($major == 'Biochemistry and Molecular Biology'){echo("selected");}?>>Biochemistry and Molecular Biology</option>
+					<option <?php if($major == 'Bioinformatics and Computational Biology'){echo("selected");}?>>Bioinformatics and Computational Biology</option>
+					<option <?php if($major == 'Biological Sciences'){echo("selected");}?>>Biological Sciences</option>
+					<option <?php if($major == 'Business Technology Administration'){echo("selected");}?>>Business Technology Administration</option>
+					<option <?php if($major == 'Chemistry'){echo("selected");}?>>Chemistry</option>
+					<option <?php if($major == 'Dance'){echo("selected");}?>>Dance</option>
+					<option <?php if($major == 'Economics'){echo("selected");}?>>Economics</option>
+					<option <?php if($major == 'Financial Economics'){echo("selected");}?>>Financial Economics</option>
+					<option <?php if($major == 'Emergency Health Services'){echo("selected");}?>>Emergency Health Services</option>
+					<option <?php if($major == 'English'){echo("selected");}?>>English</option>
+					<option <?php if($major == 'Environmental Science and Environmental Studies'){echo("selected");}?>>Environmental Science and Environmental Studies</option>
+					<option <?php if($major == 'Gender and Womens Studies'){echo("selected");}?>>Gender and Womens Studies</option>
+					<option <?php if($major == 'Geography'){echo("selected");}?>>Geography</option>
+					<option <?php if($major == 'Global Studies'){echo("selected");}?>>Global Studies</option>
+					<option <?php if($major == 'Health Administration and Policy'){echo("selected");}?>>Health Administration and Policy</option>
+					<option <?php if($major == 'History'){echo("selected");}?>>History</option>
+					<option <?php if($major == 'Information Systems'){echo("selected");}?>>Information Systems</option>
+					<option <?php if($major == 'Interdisciplinary Studies'){echo("selected");}?>>Interdisciplinary Studies</option>
+					<option <?php if($major == 'Management of Aging Services'){echo("selected");}?>>Management of Aging Services</option>
+					<option <?php if($major == 'Mathematics'){echo("selected");}?>>Mathematics</option>
+					<option <?php if($major == 'Statistics'){echo("selected");}?>>Statistics</option>
+					<option <?php if($major == 'Media and Communication Studies'){echo("selected");}?>>Media and Communication Studies</option>
+					<option <?php if($major == 'Modern Languages, Linguistics and Intercultural Communication'){echo("selected");}?>>Modern Languages, Linguistics and Intercultural Communication</option>
+					<option <?php if($major == 'Music'){echo("selected");}?>>Music</option>
+					<option <?php if($major == 'Philosophy'){echo("selected");}?>>Philosophy</option>
+					<option <?php if($major == 'Physics'){echo("selected");}?>>Physics</option>
+					<option <?php if($major == 'Political Sciences'){echo("selected");}?>>Political Science</option>
+					<option <?php if($major == 'Psychology'){echo("selected");}?>>Psychology</option>
+					<option <?php if($major == 'Social Work'){echo("selected");}?>>Social Work</option>
+					<option <?php if($major == 'Sociology'){echo("selected");}?>>Sociology</option>
+					<option <?php if($major == 'Theatre'){echo("selected");}?>>Theatre</option>
+					<option <?php if($major == 'Visual Arts'){echo("selected");}?>>Visual Arts</option>
+					<option <?php if($major == 'Undecided'){echo("selected");}?>>Undecided</option>
+					<option <?php if($major == 'Other'){echo("selected");}?>>Other</option>
 -->
 					</select>
 			</div>
