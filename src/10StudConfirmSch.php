@@ -22,16 +22,12 @@ $_SESSION["appTime"] = $_POST["appTime"]; // radio button selection from previou
 			include('../CommonMethods.php');
 			$COMMON = new Common($debug);
 			
-      $studid = $_SESSION["studID"];
-
-			$sql = "select * from Proj2Students where `StudentID` = '$studid'";
-			$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
-			$row = mysql_fetch_row($rs);
-
-			$firstn = $row[1]; //$_SESSION["firstN"];
-			$lastn = $row[2]; //$_SESSION["lastN"];
-			$email = $row[4]; //$_SESSION["email"];
-			$major = $row[5]; //$_SESSION["major"];
+            //Cache student info
+			$firstn = $_SESSION["firstN"];
+			$lastn = $_SESSION["lastN"];
+			$studid = $_SESSION["studID"];
+			$major = $_SESSION["major"];
+			$email = $_SESSION["email"];
 			
 			
 			
