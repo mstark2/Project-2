@@ -5,12 +5,17 @@ include('../CommonMethods.php');
 $COMMON = new Common($debug);
 
 if($_POST["cancel"] == 'Cancel'){ //Did indeed cancel
-    //Cache student info
-	$firstn = $_SESSION["firstN"];
-	$lastn = $_SESSION["lastN"];
-	$studid = $_SESSION["studID"];
-	$major = $_SESSION["major"];
-	$email = $_SESSION["email"];
+    $studid = $_SESSION["studID"];
+
+    $sql = "select * from Proj2Appointments where `EnrolledID` like '%$studID%'";
+    $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
+    $row = mysql_fetch_row($rs);
+
+    //used to be assigned to session vars
+    $firstn = $row[1];
+    $lastn = $row[2];
+    $email = $row[4];
+    $major = $row[5];
 	
 	//remove stud from EnrolledID
 	$sql = "select * from Proj2Appointments where `EnrolledID` like '%$studid%'";

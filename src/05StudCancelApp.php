@@ -25,11 +25,12 @@ $COMMON = new Common($debug);
 			$sql = "select * from Proj2Appointments where `EnrolledID` like '%$studID%'";
 			$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 			$row = mysql_fetch_row($rs);
-
-			$firstn = $row[1]; //$_SESSION["firstN"];
-			$lastn = $row[2]; //$_SESSION["lastN"];
-			$email = $row[4]; //$_SESSION["email"];
-			$major = $row[5]; //$_SESSION["major"];
+            
+            //used to be assigned to session vars
+			$firstn = $row[1];
+			$lastn = $row[2];
+			$email = $row[4];
+			$major = $row[5];
 			
       //Retrieve current appointment
 			$sql = "select * from Proj2Appointments where `EnrolledID` like '%$studid%'";

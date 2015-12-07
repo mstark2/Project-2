@@ -28,10 +28,11 @@ $_SESSION["appTime"] = $_POST["appTime"]; // radio button selection from previou
 			$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 			$row = mysql_fetch_row($rs);
 
-			$firstn = $row[1]; //$_SESSION["firstN"];
-			$lastn = $row[2]; //$_SESSION["lastN"];
-			$email = $row[4]; //$_SESSION["email"];
-			$major = $row[5]; //$_SESSION["major"];
+            //used to be assigned to session vars
+			$firstn = $row[1];
+			$lastn = $row[2];
+			$email = $row[4];
+			$major = $row[5];
 			
 			
 			
@@ -60,8 +61,8 @@ $_SESSION["appTime"] = $_POST["appTime"]; // radio button selection from previou
 			
             //Retrieve current advisor info
 			$currentAdvisorName;
-			$currentAdvisorID = $_SESSION["advisor"];
-			$currentDatephp = strtotime($_SESSION["appTime"]);
+			$currentAdvisorID = $_POST["advID"];
+			$currentDatephp = $_POST["appTime"];
 
 			if($currentAdvisorID != 0){ //Advisor has a name, retreive it
 				$sql2 = "select * from Proj2Advisors where `id` = '$currentAdvisorID'";
@@ -81,6 +82,8 @@ $_SESSION["appTime"] = $_POST["appTime"]; // radio button selection from previou
         </div>
 	    <div class="nextButton">
 		<?php
+            echo "<input type='hidden' value='", $currentAdvisorID, "' name='advID'>";
+            echo "<input type='hidden' value='", $currentDatephp, "' name='appTime'>";
 			if($_SESSION["resch"] == true){
 				echo "<input type='submit' name='finish' class='button medium go' value='Reschedule'>";
 			}

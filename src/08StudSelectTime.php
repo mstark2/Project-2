@@ -48,7 +48,7 @@ $advisorName = $row[1]." ".$row[2];
 
 			$curtime = time();
 
-			if ($_SESSION["advisor"] != "Group")  // for individual conferences only
+			if ($localAdvisor != "Group")  // for individual conferences only
 			{ 
                 //Retrieve available individual appointments for  major with chosen advisor
 				$sql = "select * from Proj2Appointments where `EnrolledNum` = 0 and (`Major` like '%$localMaj%' or `Major` = '') and `Time` > '".date('Y-m-d H:i:s')."' and `AdvisorID` = ".$_POST['advisor']." order by `Time` ASC limit 30";
@@ -73,7 +73,9 @@ $advisorName = $row[1]." ".$row[2];
 			while($row = mysql_fetch_row($rs)){
 				$datephp = strtotime($row[1]);
 				echo "<label for='",$row[0],"'>";
-				echo "<input id='",$row[0],"' type='radio' name='appTime' required value='", $row[1], "'>", date('l, F d, Y g:i A', $datephp) ,"</label><br>\n";
+                echo "<input type='hidden' value='", $localAdvisor, "' name='advID'>";
+                echo "<input id='",$row[0],"' type='radio' name='appTime' required value='", $row[1], "'>", date('l, F d, Y g:i A', $datephp) ,"</label><br>\n";
+				//echo "<input id='",$row[0],"' type='radio' name='appTime' required value='", $row[1], "'>", date('l, F d, Y g:i A', $datephp) ,"</label><br>\n";
 			}
 		?>
         </div>

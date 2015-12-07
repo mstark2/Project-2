@@ -13,14 +13,15 @@ if($_POST["finish"] == 'Cancel') {
     $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
     $row = mysql_fetch_row($rs);
     
-	$firstn = $row[1]; //$_SESSION["firstN"];
-	$lastn = $row[2]; //$_SESSION["lastN"];
-	$email = $row[4]; //$_SESSION["email"];
-	$major = $row[5]; //$_SESSION["major"];
-	$advisor = $_SESSION["advisor"];
+    //used to be assigned to session vars
+	$firstn = $row[1];
+	$lastn = $row[2];
+	$email = $row[4];
+	$major = $row[5];
+	$advisor = $_POST["advID"];
 
 
-	$apptime = $_SESSION["appTime"];
+	$apptime = $_POST["appTime"];
 
     //this should'nt be needed. Student added in StudProcessSignIn.php
 	/* if(empty($row)){
