@@ -75,7 +75,6 @@ $advisorName = $row[1]." ".$row[2];
 				echo "<label for='",$row[0],"'>";
                 echo "<input type='hidden' value='", $localAdvisor, "' name='advID'>";
                 echo "<input id='",$row[0],"' type='radio' name='appTime' required value='", $row[1], "'>", date('l, F d, Y g:i A', $datephp) ,"</label><br>\n";
-				//echo "<input id='",$row[0],"' type='radio' name='appTime' required value='", $row[1], "'>", date('l, F d, Y g:i A', $datephp) ,"</label><br>\n";
 			}
 		?>
         </div>

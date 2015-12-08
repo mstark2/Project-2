@@ -6,6 +6,7 @@ $COMMON = new Common($debug);
 
 if($_POST["finish"] == 'Cancel') {
 	$_SESSION["status"] = "none";
+    $status = "none";
 } else {
 	$studid = $_SESSION["studID"];
     
@@ -61,6 +62,7 @@ if($_POST["finish"] == 'Cancel') {
 		
 	    //Completed appointment signup   
         $_SESSION["status"] = "complete";
+        $status = "complete";
 	}
 	elseif($_POST["finish"] == 'Reschedule'){
 		//Retrieve old appointment
@@ -93,6 +95,7 @@ if($_POST["finish"] == 'Cancel') {
         $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 
 		$_SESSION["status"] = "resch";
+        $status = "resch";
 	}
 
 	//Update student status to nothing
@@ -100,7 +103,7 @@ if($_POST["finish"] == 'Cancel') {
 	$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 
 }
-if($debug == false) { header('Location: 12StudExit.php'); }
+if($debug == false) { include('12StudExit.php'); }
 
 
 

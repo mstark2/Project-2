@@ -76,7 +76,7 @@ $_SESSION["appTime"] = $_POST["appTime"]; // radio button selection from previou
 			echo "<h2>Current Appointment</h2>";
 			echo "<label for='newinfo'>";
 			echo "Advisor: ",$currentAdvisorName,"<br>";
-			echo "Appointment: ",date('l, F d, Y g:i A', $currentDatephp),"</label>";
+			echo "Appointment: ",date('l, F d, Y g:i A', strtotime($currentDatephp)),"</label>";
 			
 		?>
         </div>

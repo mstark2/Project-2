@@ -24,23 +24,22 @@ session_start();
 			$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 			$row = mysql_fetch_row($rs);
             
-            //used to be assigned to session vars
-			$status = $row[6];
+			//$status = $row[6];
             
             //Display message based on the student's status after processing appointment
-			if($_SESSION["status"] == "complete"){ //Completed sign up with no problems
+			if($status == "complete"){ //Completed sign up with no problems
 				echo "<r>You have completed your sign-up for an advising appointment.</r>";
 			}
-			elseif($_SESSION["status"] == "none"){ //Does not have an appointment
+			elseif($status == "none"){ //Does not have an appointment
 				echo "<r>You did not sign up for an advising appointment.</r>";
 			}
-			if($_SESSION["status"] == "cancel"){ //Decided to cancel their previously scheduled appointment
+			if($status == "cancel"){ //Decided to cancel their previously scheduled appointment
 				echo "<r>You have cancelled your advising appointment.</r>";
 			}
-			if($_SESSION["status"] == "resch"){ //Decided to reschedule their previous appointment
+			if($status == "resch"){ //Decided to reschedule their previous appointment
 				echo "<r>You have changed your advising appointment.</r>";
 			}
-			if($_SESSION["status"] == "keep"){ //Decided not to change the appointment and just keep it
+			if($status == "keep"){ //Decided not to change the appointment and just keep it
 				echo "<r>No changes have been made to your advising appointment.</r>";
 			}
 		?>

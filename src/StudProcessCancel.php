@@ -34,9 +34,11 @@ if($_POST["cancel"] == 'Cancel'){ //Did indeed cancel
 	$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 	
 	$_SESSION["status"] = "cancel";
+    $status = "cancel";
 }
 else{ //Decided to keep appointment after all
 	$_SESSION["status"] = "keep";
+    $status = "keep";
 }
-header('Location: 12StudExit.php');
+include('12StudExit.php');
 ?>
