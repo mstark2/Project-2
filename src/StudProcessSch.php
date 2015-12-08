@@ -5,10 +5,9 @@ include('../CommonMethods.php');
 $COMMON = new Common($debug);
 
 if($_POST["finish"] == 'Cancel') {
-	$_SESSION["status"] = "none";
     $status = "none";
 } else {
-	$studid = $_SESSION["studID"];
+	$studid = $_SESSION["userID"];
     
     $sql = "select * from Proj2Students where `StudentID` = '$studid'";
     $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
@@ -60,8 +59,7 @@ if($_POST["finish"] == 'Cancel') {
         //executeQuery moved from if/else block
         $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 		
-	    //Completed appointment signup   
-        $_SESSION["status"] = "complete";
+	    //Completed appointment signup
         $status = "complete";
 	}
 	elseif($_POST["finish"] == 'Reschedule'){
@@ -94,7 +92,6 @@ if($_POST["finish"] == 'Cancel') {
         //executeQuery moved from if/else block
         $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 
-		$_SESSION["status"] = "resch";
         $status = "resch";
 	}
 

@@ -65,7 +65,7 @@ $COMMON = new Common($debug);
 				<br><br><label>
 				<?php
                 //Get major
-                $studid = $_SESSION["studID"];
+                $studid = $_SESSION["userID"];
 
                 $sql = "select * from Proj2Students where `StudentID` like '%$studID%'";
                 $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);

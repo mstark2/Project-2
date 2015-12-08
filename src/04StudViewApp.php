@@ -4,7 +4,7 @@ $debug = false;
 include('../CommonMethods.php');
 $COMMON = new Common($debug);
 
-$studID = $_SESSION["studID"];
+$studID = $_SESSION["userID"];
 ?>
 
 <html lang="en">

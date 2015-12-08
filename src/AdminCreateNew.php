@@ -23,12 +23,6 @@
 		<h2>New Advisor has been created:</h2>
 
 		<?php
-            //Cache advisor info
-			$first = $_SESSION["AdvF"];
-			$last = $_SESSION["AdvL"];
-			$user = $_SESSION["AdvUN"];
-			$pass = $_SESSION["AdvPW"];
-            $office = $_SESSION["AdvO"];
 
 			include('../CommonMethods.php');
 			$debug = false;

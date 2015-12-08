@@ -20,7 +20,7 @@ $COMMON = new Common($debug);
 	    <div class="field">
 	    <?php
       //Get student info
-			$studid = $_SESSION["studID"];
+			$studid = $_SESSION["userID"];
 
 			$sql = "select * from `Proj2Students` where `StudentID` like '%$studID%'";
 			$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);

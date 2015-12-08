@@ -2,15 +2,15 @@
 session_start();
 
 //Advisor information
-$_SESSION["AdvF"] = $_POST["firstN"];
-$_SESSION["AdvL"] = $_POST["lastN"];
-$_SESSION["AdvUN"] = $_POST["UserN"];
-$_SESSION["AdvPW"] = $_POST["PassW"];
+$first = $_POST["firstN"];
+$last = $_POST["lastN"];
+$user = $_POST["UserN"];
+$pass = $_POST["PassW"];
 $_SESSION["PassCon"] = false;
-$_SESSION["AdvO"] = $_POST["Office"];
+$office = $_POST["Office"];
 
 if($_POST["PassW"] == $_POST["ConfP"]){ //Confirm password matched, proceed
-	header('Location: AdminCreateNew.php');
+	include('AdminCreateNew.php');
 }
 elseif($_POST["PassW"] != $_POST["ConfP"]){ //Did not match, return to create new advisor
 	$_SESSION["PassCon"] = true;

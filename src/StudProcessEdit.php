@@ -1,16 +1,10 @@
 <?php
 session_start();
 
-//Set session student info to new info
-$_SESSION["firstN"] = strtoupper($_POST["firstN"]);
-$_SESSION["lastN"] = strtoupper($_POST["lastN"]);
-$_SESSION["email"] = $_POST["email"];
-$_SESSION["major"] = $_POST["major"];
-
 //Cache new student info
 $firstn = strtoupper($_POST["firstN"]);
 $lastn = strtoupper($_POST["lastN"]);
-$studid = $_SESSION["studID"];
+$studid = $_SESSION["userID"];
 $email = $_POST["email"];
 $major = $_POST["major"];
 

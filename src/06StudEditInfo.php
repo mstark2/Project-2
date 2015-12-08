@@ -11,14 +11,9 @@ $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 
 //Look through the results until we find our student
 while($row = mysql_fetch_row($rs)){
-	if($row[3] == $_SESSION["studID"]){ //the current student
+	if($row[3] == $_SESSION["userID"]){ //the current student
 		
-    //Display info
-		$_SESSION["firstN"] = $row[1];
-		$_SESSION["lastN"] = $row[2];
-		$_SESSION["email"] = $row[4];
-		$_SESSION["major"] = $row[5];
-        
+        //Display info
         $firstn = $row[1];
         $lastn = $row[2];
         $email = $row[4];
@@ -53,7 +48,7 @@ while($row = mysql_fetch_row($rs)){
 			</div>
 			<div class="field">
 				<label for="studID">Student ID</label>
-				<input id="studID" size="30" maxlength="7" type="text" pattern="[A-Za-z]{2}[0-9]{5}" title="AB12345" name="studID" disabled value=<?php echo $_SESSION["studID"]?>>
+				<input id="studID" size="30" maxlength="7" type="text" pattern="[A-Za-z]{2}[0-9]{5}" title="AB12345" name="studID" disabled value=<?php echo $_SESSION["userID"]?>>
 			</div>
 			<div class="field">
 				<label for="email">E-mail</label>

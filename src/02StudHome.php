@@ -23,7 +23,7 @@ error_reporting (E_ALL);
 			$COMMON = new Common($debug);
 
 			//Get the student's row from the table based on the ID
-			$studid = $_SESSION["studID"];
+			$studid = $_SESSION["userID"];
 			$sql = "select * from Proj2Students where `StudentID` = '$studid'";
 			$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 			$row = mysql_fetch_row($rs);

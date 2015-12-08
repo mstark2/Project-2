@@ -13,7 +13,7 @@ if(isset($_POST["advisor"])){
 include('../CommonMethods.php');
 $COMMON = new Common($debug);
 
-$studid = $_SESSION["studID"];
+$studid = $_SESSION["userID"];
 $sql = "select * from Proj2Students where `StudentID` = '$studid'";
 $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 $row = mysql_fetch_row($rs);

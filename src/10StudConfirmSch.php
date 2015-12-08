@@ -1,6 +1,5 @@
 <?php
 session_start();
-$_SESSION["appTime"] = $_POST["appTime"]; // radio button selection from previous form
 ?>
 
 <html lang="en">
@@ -22,7 +21,7 @@ $_SESSION["appTime"] = $_POST["appTime"]; // radio button selection from previou
 			include('../CommonMethods.php');
 			$COMMON = new Common($debug);
 			
-            $studid = $_SESSION["studID"];
+            $studid = $_SESSION["userID"];
 
 			$sql = "select * from Proj2Students where `StudentID` = '$studid'";
 			$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);

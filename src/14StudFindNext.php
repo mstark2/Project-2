@@ -6,9 +6,14 @@ $COMMON = new Common($debug);
 
 
 
-//Cache student major and ID
-$localMaj = $_SESSION["major"];
-$studID = $_SESSION["studID"];
+//Get major
+$studID = $_SESSION["userID"];
+
+$sql = "select * from `Proj2Students` where `StudentID` like '%$studID%'";
+$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
+$row = mysql_fetch_row($rs);
+
+$localMaj = $row[5];
 ?>
 
 <html lang="en">

@@ -12,7 +12,7 @@ $studid = strtoupper($_POST["studID"]);
 $email = $_POST["email"];
 $major = $_POST["major"];
 
-$_SESSION["studID"] = $studid;
+$_SESSION["userID"] = $studid;
 
 //make sure the abbreviation is added to the DB
 if($major == "Computer Science"){
@@ -40,12 +40,6 @@ $sql = "insert into Proj2Students (`FirstName`,`LastName`,`StudentID`,`Email`,`M
 $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 }
 
-	
-//remove once done with session
-$_SESSION["firstN"] = $firstn;
-$_SESSION["lastN"] = $lastn;
-$_SESSION["email"] = $email;
-$_SESSION["major"] = $major;
 
 header('Location: 02StudHome.php');
 ?>

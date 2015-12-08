@@ -5,7 +5,7 @@ include('../CommonMethods.php');
 $COMMON = new Common($debug);
 
 if($_POST["cancel"] == 'Cancel'){ //Did indeed cancel
-    $studid = $_SESSION["studID"];
+    $studid = $_SESSION["userID"];
 
     $sql = "select * from Proj2Students where `StudentID` like '%$studID%'";
     $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
@@ -33,11 +33,9 @@ if($_POST["cancel"] == 'Cancel'){ //Did indeed cancel
 	$sql = "update `Proj2Students` set `Status` = 'N' where `StudentID` = '$studid'";
 	$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 	
-	$_SESSION["status"] = "cancel";
     $status = "cancel";
 }
 else{ //Decided to keep appointment after all
-	$_SESSION["status"] = "keep";
     $status = "keep";
 }
 include('12StudExit.php');
