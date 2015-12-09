@@ -5,25 +5,30 @@ include('../CommonMethods.php');
 $COMMON = new Common($debug);
 
 if($_POST["finish"] == 'Cancel') {
+		//used to be $_SESSION["status"], used an include from previous file so I can use the $status variable from it
     $status = "none";
 } else {
 	$studid = $_SESSION["userID"];
     
-    $sql = "select * from Proj2Students where `StudentID` = '$studid'";
-    $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
-    $row = mysql_fetch_row($rs);
-    
-    //used to be assigned to session vars
+	//Get students information from the database instead of session variables
+	$sql = "select * from Proj2Students where `StudentID` = '$studid'";
+	$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
+	$row = mysql_fetch_row($rs);
+	
+	//used to be assigned to session vars ($_SESSION["firstN/lastN/email/major"])
 	$firstn = $row[1];
 	$lastn = $row[2];
 	$email = $row[4];
 	$major = $row[5];
+	
+	//added hidden post to previous file so I could get the advisor's ID without using $_SESSION["advisor"]
+	//and still access their information from the database with the ID instead of using session variables
 	$advisor = $_POST["advID"];
 
-
+	//added hidden post to previous file to avoid using $_SESSION["appTime"];
 	$apptime = $_POST["appTime"];
 
-    //this should'nt be needed. Student added in StudProcessSignIn.php
+  //Don't need to add student to database here anymore, they are now added in StudProcessSignIn.php
 	/* if(empty($row)){
 		$sql = "insert into Proj2Students (`FirstName`,`LastName`,`StudentID`,`Email`,`Major`) values ('$firstn','$lastn','$studid','$email','$major')";
 		$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);

@@ -30,7 +30,7 @@ $rs = $Common->executeQuery($sql, "Advising Appointments");
 $row = mysql_fetch_row($rs);
 
 $_SESSION["userID"] = $row[0]; //userID is advisor table's primary key
-$_SESSION["UserVal"] = false;
+$userVal = false;
 
 
 
@@ -39,8 +39,8 @@ if($row){ //Found match, sign in succeeded
 	else { header('Location: AdminUI.php'); }
 }
 else{ //No match, return to sign in
-	$_SESSION["UserVal"] = true;
-	header('Location: AdminSignIn.php'); 
+    $userVal = true;
+	include('AdminSignIn.php'); 
 }
 
 ?>
