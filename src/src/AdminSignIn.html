@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>UMBC COEIT Engineering and Computer Science Advising Admin Sign In</title>
+    <link rel='stylesheet' type='text/css' href='../css/standard.css'/>
+	<h2>UMBC COEIT Engineering and Computer Science Advising</h2>
+  </head>
+  <body>
+    <div id="login">
+      <div id="form">
+        <div class="top">
+		<!--<h1>UMBC COEIT Engineering and Computer Science Advising</h1>-->
+		<h2>Admin Sign In</h2>
+        <form action="AdminProcessSignIn.php" method="POST" name="SignIn">
+
+        <!-- Get username and password -->
+	    <div class="field">
+	      <label for="UserN">Username</label>
+	      <input id="UserN" size="20" maxlength="50" type="text" name="UserN" required autofocus>
+	    </div>
+
+	    <div class="field">
+	      <label for="PassW">Password</label>
+	      <input id="PassW" size="20" maxlength="50" type="password" name="PassW" required>
+	    </div>
+
+	    <div class="nextButton">
+			<input type="submit" name="next" class="button medium go" value="Next">
+	<?php
+		include ('footer.html');
+	?>
+	    </div>
+	</div>
+	<footer style="padding-top: 10px;">
+		&copy; University of Maryland, Baltimore County <span class="bullet">&bull;</span> 1000 Hilltop Circle <span class="bullet">&bull;</span> Baltimore, MD 21250
+	</footer>
+	</form>
+  </body>
+  
+</html>
