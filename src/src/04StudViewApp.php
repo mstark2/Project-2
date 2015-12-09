@@ -4,7 +4,7 @@ $debug = false;
 include('../CommonMethods.php');
 $COMMON = new Common($debug);
 
-$studID = $_SESSION["userID"];
+$studID = $_SESSION["studID"];
 ?>
 
 <html lang="en">
@@ -38,7 +38,6 @@ $studID = $_SESSION["userID"];
 					$rs2 = $COMMON->executeQuery($sql2, $_SERVER["SCRIPT_NAME"]);
 					$row2 = mysql_fetch_row($rs2);
 					$advisorName = $row2[1] . " " . $row2[2];
-					$advisorOffice = $row2[5];
 				}
 				else{$advisorName = "Group";} //Advisor is just group
 			
@@ -46,12 +45,8 @@ $studID = $_SESSION["userID"];
 				echo "<label for='info'>";
 				echo "Advisor: ", $advisorName, "<br>";
 				echo "Appointment: ", date('l, F d, Y g:i A', $datephp), "<br>";
-				
-				//do not need to show the advisor office if the app is a group
-				if($advisorID != 0){
-					echo "Advisor Office: ", $advisorOffice, "<br>";
-				}
-				
+				/* Do not need to show the advisor's office */
+				echo "Advisor Office: ", $row2[5], "<br>";
                 echo "Meeting Room: ", $row[7], "</label>";
 			}
 			else // something is up, and their DB table needs to be fixed
